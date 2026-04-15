@@ -1,11 +1,57 @@
-[gd_scene format=3 uid="uid://dxcjrjgcq1853"]
+[gd_scene format=4 uid="uid://dxcjrjgcq1853"]
 
-[ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Asset/Prefab/player.tscn" id="1_3kw6k"]
+[ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Asset/Prefab/Player.tscn" id="1_3kw6k"]
+[ext_resource type="PackedScene" uid="uid://dq4l4r02bh4vf" path="res://Asset/Prefab/TileMap/Right_Angle_Border.tscn" id="2_75sk4"]
+[ext_resource type="Texture2D" uid="uid://h1khakfaru5i" path="res://Asset/Sprites/Himmelinsel-Spielplatz mit Brücken und Wolken.png" id="3_ro1sb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1sb"]
+resource_name = "Himmel"
+texture = ExtResource("3_ro1sb")
+texture_region_size = Vector2i(13, 13)
+55:2/size_in_atlas = Vector2i(10, 7)
+55:2/0 = 0
+66:2/size_in_atlas = Vector2i(11, 10)
+66:2/0 = 0
+44:28/size_in_atlas = Vector2i(9, 7)
+44:28/0 = 0
+63:53/size_in_atlas = Vector2i(1, 6)
+63:53/0 = 0
+17:50/size_in_atlas = Vector2i(6, 2)
+17:50/0 = 0
+64:59/size_in_atlas = Vector2i(11, 2)
+64:59/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6ygn0"]
+tile_size = Vector2i(13, 13)
+sources/1 = SubResource("TileSetAtlasSource_ro1sb")
 
 [node name="MainScene" type="Node2D" unique_id=1545543882]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1290585481]
-position = Vector2(575, 327)
+[node name="Node2D" parent="." unique_id=1981911855 instance=ExtResource("2_75sk4")]
+position = Vector2(3, 3)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=101438099]
+
+[node name="Layer1" type="TileMapLayer" parent="TileMapLayer" unique_id=829518565]
+use_parent_material = true
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAEAAMAAQAsABwAAAAEAAoAAQAsABwAAAAEABEAAQAsABwAAAAEABgAAQAsABwAAAAMABYAAQAsABwAAAAMAA8AAQAsABwAAAAJAAkAAQAsABwAAAAMAAIAAQAsABwAAAATAAQAAQAsABwAAAARAAkAAQAsABwAAAAaAA4AAQAsABwAAAAVABMAAQAsABwAAAAUAA8AAQAsABwAAAAYABgAAQAsABwAAAASABgAAQAsABwAAAAhABgAAQAsABwAAAAdABQAAQAsABwAAAAXABUAAQAsABwAAAAoABIAAQAsABwAAAApABcAAQAsABwAAAAjABMAAQAsABwAAAAjABAAAQAsABwAAAApAA0AAQAsABwAAAAfAAkAAQAsABwAAAAoAAcAAQAsABwAAAAkAAwAAQAsABwAAAAhAAQAAQAsABwAAAAaAAMAAQAsABwAAAAYAAgAAQAsABwAAAAoAAIAAQAsABwAAAAhAAAAAQAsABwAAAASAAAAAQAsABwAAAA=")
+tile_set = SubResource("TileSet_6ygn0")
+
+[node name="Node2D2" parent="." unique_id=1525928211 instance=ExtResource("2_75sk4")]
+position = Vector2(1151, 2)
+rotation = 1.5707964
+
+[node name="Node2D3" parent="." unique_id=1581992897 instance=ExtResource("2_75sk4")]
+position = Vector2(0, 648)
+rotation = -1.5707964
+
+[node name="Node2D3" parent="Node2D3" unique_id=1369114264 instance=ExtResource("2_75sk4")]
+position = Vector2(-2.203054e-05, 1152)
+rotation = -1.5707964
 
 [node name="Player" parent="." unique_id=1090090882 instance=ExtResource("1_3kw6k")]
+position = Vector2(575, 327)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1290585481]
 position = Vector2(575, 327)

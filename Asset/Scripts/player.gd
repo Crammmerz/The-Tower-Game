@@ -1,34 +1,43 @@
 extends CharacterBody2D
 
 @onready var anim = $PlayerAnim
-const SPEED = 150.0
+@export var move: bool = true
 
-func _physics_process(delta: float) -> void:
-	var input_vector = Vector2.ZERO
+@export var stats: BaseStats
+var enemy_in_range = []
+
+func _ready() -> void:
+	if stats:
+		stats = stats.duplicate()
+		print("Player Stats Initialization: Success")
+	else:
+		print("Player Stats Initialization: Failed")
+
+func _physics_process(_delta: float) -> void:
+	if !stats: return
+	handle_movement_input()
+	move_and_slide()
+	update_animations()
+
+func handle_movement_input() -> void:
+	var input_direction = Vector2.ZERO
 	
+	if move:
+		input_direction = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	
+	velocity = input_direction * stats.move_speed
+
+func update_animations() -> void:
 	if velocity == Vector2.ZERO:
 		anim.play("Idle")
-	if Input.is_action_pressed("move_forward"):
-		input_vector.y -= 1
-	if Input.is_action_pressed("move_backward"):
-		input_vector.y += 1
-	if Input.is_action_pressed("move_left"):
-		input_vector.x -= 1
-	if Input.is_action_pressed("move_right"):
-		input_vector.x += 1
-	
-	if input_vector == Vector2.ZERO:
-		anim.play("Idle")
 	else:
-		if abs(input_vector.x) > abs(input_vector.y):
+		# Determine if we are moving more horizontally or vertically
+		if abs(velocity.x) > abs(velocity.y):
 			anim.play("Move_Right")
-			anim.flip_h = input_vector.x < 0
+			anim.flip_h = velocity.x < 0
 		else:
-			if input_vector.y < 0:
+			if velocity.y < 0:
 				anim.play("Move_Forward")
 			else:
-				anim.play("Idle")
-	
-	input_vector = input_vector.normalized()
-	velocity = input_vector * SPEED
-	move_and_slide()
+				# If you have a backward/down anim, play it here
+				pass # anim.play("Move_Backward")

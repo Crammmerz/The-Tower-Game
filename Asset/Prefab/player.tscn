@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://boi8853nfg7kx" path="res://Asset/Scripts/player.gd" id="1_7pk37"]
 [ext_resource type="Texture2D" uid="uid://c85cjug5aiv06" path="res://Asset/Sprites/Adventurer Sprite Sheet v1.5.png" id="2_7pk37"]
+[ext_resource type="Resource" uid="uid://jp54dtai7lq1" path="res://Asset/Resource/PlayerStats.tres" id="2_hcf0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjtfx"]
 atlas = ExtResource("2_7pk37")
@@ -144,8 +145,12 @@ height = 50.0
 radius = 6.0
 height = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7pk37"]
+radius = 200.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1090090882]
 script = ExtResource("1_7pk37")
+stats = ExtResource("2_hcf0b")
 
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="." unique_id=1393381358]
 texture_repeat = 1
@@ -162,3 +167,8 @@ shape = SubResource("CapsuleShape2D_7pk37")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=330703290]
 shape = SubResource("CapsuleShape2D_60r7n")
+
+[node name="Detection Range" type="Area2D" parent="." unique_id=342875766]
+
+[node name="Collision" type="CollisionShape2D" parent="Detection Range" unique_id=1886814395]
+shape = SubResource("CircleShape2D_7pk37")
