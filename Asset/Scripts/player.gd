@@ -4,14 +4,10 @@ extends CharacterBody2D
 @export var move: bool = true
 
 @export var stats: BaseStats
-var enemy_in_range = []
 
 func _ready() -> void:
 	if stats:
 		stats = stats.duplicate()
-		print("Player Stats Initialization: Success")
-	else:
-		print("Player Stats Initialization: Failed")
 
 func _physics_process(_delta: float) -> void:
 	if !stats: return

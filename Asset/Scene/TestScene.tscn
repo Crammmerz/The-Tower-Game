@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://dxcjrjgcq1853"]
 
-[ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Asset/Prefab/Player.tscn" id="1_3kw6k"]
-[ext_resource type="PackedScene" uid="uid://dq4l4r02bh4vf" path="res://Asset/Prefab/TileMap/Right_Angle_Border.tscn" id="2_75sk4"]
+[ext_resource type="PackedScene" uid="uid://dq4l4r02bh4vf" path="res://Asset/Prefab/Tile/Right_Angle_Border.tscn" id="2_75sk4"]
+[ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Asset/Prefab/Player/Player.tscn" id="3_81ok0"]
 [ext_resource type="Texture2D" uid="uid://h1khakfaru5i" path="res://Asset/Sprites/Himmelinsel-Spielplatz mit Brücken und Wolken.png" id="3_ro1sb"]
+[ext_resource type="PackedScene" uid="uid://dpiq152rngtsl" path="res://Asset/Prefab/Enemy/enemy.tscn" id="4_81ok0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1sb"]
 resource_name = "Himmel"
@@ -50,8 +51,11 @@ rotation = -1.5707964
 position = Vector2(-2.203054e-05, 1152)
 rotation = -1.5707964
 
-[node name="Player" parent="." unique_id=1090090882 instance=ExtResource("1_3kw6k")]
-position = Vector2(575, 327)
+[node name="Player" parent="." unique_id=1090090882 instance=ExtResource("3_81ok0")]
+position = Vector2(574, 327)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1290585481]
-position = Vector2(575, 327)
+[node name="Enemy" parent="." unique_id=1979833095 instance=ExtResource("4_81ok0")]
+position = Vector2(266, 476)
+
+[node name="Enemy2" parent="." unique_id=1667197516 instance=ExtResource("4_81ok0")]
+position = Vector2(831, 471)
