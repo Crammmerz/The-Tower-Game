@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 @onready var anim = $PlayerAnim
-@export var move: bool = true
-
 @export var stats: BaseStats
 
 func _ready() -> void:
@@ -10,20 +8,20 @@ func _ready() -> void:
 		stats = stats.duplicate()
 
 func _physics_process(_delta: float) -> void:
-	if !stats: return
 	handle_movement_input()
 	move_and_slide()
 	update_animations()
 
 func handle_movement_input() -> void:
+	if not stats: return
 	var input_direction = Vector2.ZERO
 	
-	if move:
-		input_direction = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	input_direction = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	
 	velocity = input_direction * stats.move_speed
 
 func update_animations() -> void:
+	if not stats and stats.move: return
 	if velocity == Vector2.ZERO:
 		anim.play("Idle")
 	else:

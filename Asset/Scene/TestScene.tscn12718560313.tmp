@@ -1,9 +1,18 @@
 [gd_scene format=4 uid="uid://dxcjrjgcq1853"]
 
+[ext_resource type="Script" uid="uid://c2otpb44cvakq" path="res://Asset/Scripts/GameSystem/Combat/pool_manager.gd" id="1_tpcs7"]
 [ext_resource type="PackedScene" uid="uid://dq4l4r02bh4vf" path="res://Asset/Prefab/Tile/Right_Angle_Border.tscn" id="2_75sk4"]
+[ext_resource type="PackedScene" uid="uid://cdgrvkpd114kc" path="res://Asset/Prefab/Player/Combat/Active Skills/Projectile.tscn" id="2_ceasb"]
+[ext_resource type="Script" uid="uid://b3y75au3h8eo3" path="res://Asset/Scripts/GameSystem/Combat/pool_definition.gd" id="2_kq2b5"]
 [ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Asset/Prefab/Player/Player.tscn" id="3_81ok0"]
 [ext_resource type="Texture2D" uid="uid://h1khakfaru5i" path="res://Asset/Sprites/Himmelinsel-Spielplatz mit Brücken und Wolken.png" id="3_ro1sb"]
 [ext_resource type="PackedScene" uid="uid://dpiq152rngtsl" path="res://Asset/Prefab/Enemy/enemy.tscn" id="4_81ok0"]
+
+[sub_resource type="Resource" id="Resource_do8ha"]
+script = ExtResource("2_kq2b5")
+scene = ExtResource("2_ceasb")
+pool_size = 50
+metadata/_custom_type_script = "uid://b3y75au3h8eo3"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1sb"]
 resource_name = "Himmel"
@@ -27,6 +36,8 @@ tile_size = Vector2i(13, 13)
 sources/1 = SubResource("TileSetAtlasSource_ro1sb")
 
 [node name="MainScene" type="Node2D" unique_id=1545543882]
+script = ExtResource("1_tpcs7")
+scenes = Array[ExtResource("2_kq2b5")]([SubResource("Resource_do8ha")])
 
 [node name="Node2D" parent="." unique_id=1981911855 instance=ExtResource("2_75sk4")]
 position = Vector2(3, 3)
@@ -55,7 +66,7 @@ rotation = 3.1415925
 position = Vector2(574, 327)
 
 [node name="Enemy" parent="." unique_id=1979833095 instance=ExtResource("4_81ok0")]
-position = Vector2(755, 595)
+position = Vector2(616, 535)
 
 [node name="Enemy2" parent="." unique_id=1667197516 instance=ExtResource("4_81ok0")]
-position = Vector2(1015, 415)
+position = Vector2(831, 471)

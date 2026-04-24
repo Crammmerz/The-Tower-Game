@@ -1,18 +1,22 @@
 [gd_scene format=3 uid="uid://cdgrvkpd114kc"]
 
-[ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="1_fxy1f"]
+[ext_resource type="Script" uid="uid://blbnxhdnvelj3" path="res://Asset/Prefab/Player/Combat/Active Skills/projectile.gd" id="1_ykldw"]
+[ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="2_5kkfv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haiqs"]
 size = Vector2(16, 32)
 
 [node name="Area2D" type="Area2D" unique_id=342528684]
+script = ExtResource("1_ykldw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=580668372]
 rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_haiqs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1451003888]
 rotation = -1.5707964
-texture = ExtResource("1_fxy1f")
+scale = Vector2(2, 2)
+texture = ExtResource("2_5kkfv")
 region_enabled = true
 region_rect = Rect2(329, 319, 12, 41)

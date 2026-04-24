@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="BaseStats" format=3 uid="uid://jp54dtai7lq1"]
 
-[ext_resource type="Script" uid="uid://b16l7muoxhn6m" path="res://Asset/Scripts/BaseStat.gd" id="1_bo4jh"]
+[ext_resource type="Script" uid="uid://b16l7muoxhn6m" path="res://Asset/Scripts/Data/base_stats.gd" id="1_bo4jh"]
 
 [resource]
 script = ExtResource("1_bo4jh")
+move_speed = 100.0
