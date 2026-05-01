@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cdgrvkpd114kc"]
+
+[ext_resource type="Script" uid="uid://blbnxhdnvelj3" path="res://Asset/Prefab/Player/Combat/Active Skills/projectile.gd" id="1_ykldw"]
+[ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="2_5kkfv"]
+[ext_resource type="Script" uid="uid://bi4l78bjlcffe" path="res://Asset/Prefab/Player/Combat/Active Skills/hitbox.gd" id="2_taqev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haiqs"]
+size = Vector2(16, 32)
+
+[node name="Arrow" type="Node" unique_id=1243004297]
+script = ExtResource("1_ykldw")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=342528684]
+script = ExtResource("2_taqev")
+
+[node name="collision" type="CollisionShape2D" parent="hitbox" unique_id=580668372]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_haiqs")
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1451003888]
+scale = Vector2(2, 2)
+texture = ExtResource("2_5kkfv")
+region_enabled = true
+region_rect = Rect2(717, 6, 35, 9)
+
+[connection signal="body_entered" from="hitbox" to="hitbox" method="_on_body_entered"]
+[connection signal="hit_registered" from="hitbox" to="." method="_on_hitbox_hit_registered"]

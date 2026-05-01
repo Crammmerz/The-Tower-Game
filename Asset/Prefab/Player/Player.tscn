@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://boi8853nfg7kx" path="res://Asset/Prefab/Player/Script/player.gd" id="1_7pk37"]
 [ext_resource type="Texture2D" uid="uid://c85cjug5aiv06" path="res://Asset/Sprites/Adventurer Sprite Sheet v1.5.png" id="2_7pk37"]
-[ext_resource type="Resource" uid="uid://jp54dtai7lq1" path="res://Asset/Resource/base_stats.tres" id="2_hcf0b"]
+[ext_resource type="Resource" uid="uid://jp54dtai7lq1" path="res://Asset/Resource/Stats/player_base_stats.tres" id="2_hcf0b"]
 [ext_resource type="Script" uid="uid://dsee0a1322aax" path="res://Asset/Prefab/Player/Script/detection_manager.gd" id="4_avjtm"]
 [ext_resource type="Script" uid="uid://d2o4t8polhety" path="res://Asset/Prefab/Player/Script/lock_on_indicator.gd" id="5_5a3px"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="5_ufity"]
 [ext_resource type="Script" uid="uid://uc674y5gcr5p" path="res://Asset/Scripts/GameSystem/Combat/ability_manager.gd" id="7_jhrqm"]
 [ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Asset/Scripts/GameSystem/Combat/ability_definition.gd" id="8_141we"]
-[ext_resource type="PackedScene" uid="uid://cdgrvkpd114kc" path="res://Asset/Prefab/Player/Combat/Active Skills/Projectile.tscn" id="9_sc6ym"]
+[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Asset/Resource/Abilities/arrow_projectile.tres" id="9_141we"]
+[ext_resource type="Resource" uid="uid://cuyry1qar4s6l" path="res://Asset/Resource/Abilities/overdrive.tres" id="10_sc6ym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjtfx"]
 atlas = ExtResource("2_7pk37")
@@ -154,14 +155,7 @@ height = 42.0
 radius = 6.0
 height = 28.0
 
-[sub_resource type="Resource" id="Resource_3auub"]
-script = ExtResource("8_141we")
-name = "Projectile"
-cooldown = 3.0
-scene = ExtResource("9_sc6ym")
-metadata/_custom_type_script = "uid://bvk1bohqhxtwt"
-
-[node name="Player" type="CharacterBody2D" unique_id=1090090882]
+[node name="Player" type="CharacterBody2D" unique_id=1090090882 groups=["Player"]]
 script = ExtResource("1_7pk37")
 stats = ExtResource("2_hcf0b")
 
@@ -203,8 +197,7 @@ player = NodePath("..")
 
 [node name="AbilityManager" type="Node" parent="." unique_id=402996791 node_paths=PackedStringArray("player")]
 script = ExtResource("7_jhrqm")
-ability = Array[ExtResource("8_141we")]([SubResource("Resource_3auub")])
-test_ability = ExtResource("9_sc6ym")
+abilities = Array[ExtResource("8_141we")]([ExtResource("9_141we"), ExtResource("10_sc6ym")])
 player = NodePath("..")
 
 [connection signal="body_entered" from="Detection Range" to="Detection Range" method="_on_body_entered"]

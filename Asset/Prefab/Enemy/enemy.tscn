@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dpiq152rngtsl"]
 
 [ext_resource type="Texture2D" uid="uid://c85cjug5aiv06" path="res://Asset/Sprites/Adventurer Sprite Sheet v1.5.png" id="1_24nlv"]
+[ext_resource type="Script" uid="uid://el2hgteotfcp" path="res://Asset/Prefab/Enemy/enemy.gd" id="1_licy1"]
+[ext_resource type="Script" uid="uid://spc5ttrcxjpu" path="res://Asset/Prefab/Enemy/hitbox.gd" id="2_1qnxf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjtfx"]
 atlas = ExtResource("1_24nlv")
@@ -144,8 +146,9 @@ radius = 6.0
 height = 28.0
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1979833095 groups=["Enemy"]]
+script = ExtResource("1_licy1")
 
-[node name="EnemyAnim" type="AnimatedSprite2D" parent="." unique_id=1189393481]
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1189393481]
 modulate = Color(1, 1, 1, 0.5372549)
 texture_repeat = 1
 position = Vector2(5, -13)
@@ -154,6 +157,7 @@ sprite_frames = SubResource("SpriteFrames_1qnxf")
 animation = &"Move_Right"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=592592554]
+script = ExtResource("2_1qnxf")
 
 [node name="Collision" type="CollisionShape2D" parent="Hitbox" unique_id=946699556]
 shape = SubResource("CapsuleShape2D_licy1")

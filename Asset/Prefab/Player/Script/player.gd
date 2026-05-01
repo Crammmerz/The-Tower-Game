@@ -6,6 +6,7 @@ extends CharacterBody2D
 func _ready() -> void:
 	if stats:
 		stats = stats.duplicate()
+		GameEvents.register_player(self)
 
 func _physics_process(_delta: float) -> void:
 	handle_movement_input()
@@ -25,7 +26,6 @@ func update_animations() -> void:
 	if velocity == Vector2.ZERO:
 		anim.play("Idle")
 	else:
-		# Determine if we are moving more horizontally or vertically
 		if abs(velocity.x) > abs(velocity.y):
 			anim.play("Move_Right")
 			anim.flip_h = velocity.x < 0

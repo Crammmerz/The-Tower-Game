@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://bdrqfgbv21lca"]
+
+[ext_resource type="PackedScene" uid="uid://cdgrvkpd114kc" path="res://Asset/Prefab/Player/Combat/Active Skills/Projectile.tscn" id="1_15bf5"]
+[ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Asset/Scripts/GameSystem/Combat/ability_definition.gd" id="2_pij7h"]
+
+[resource]
+script = ExtResource("2_pij7h")
+name = "Arrow Projectile"
+cooldown = 1.5
+scene = ExtResource("1_15bf5")
+special_tags = {
+"damage": 10,
+"pierce": 1,
+"require_target": true
+}
