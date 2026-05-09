@@ -1,0 +1,63 @@
+[gd_scene format=4 uid="uid://dxcjrjgcq1853"]
+
+[ext_resource type="Texture2D" uid="uid://h1khakfaru5i" path="res://Asset/Sprites/Himmelinsel-Spielplatz mit Brücken und Wolken.png" id="1_bvohw"]
+[ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Scenes/Player/Player.tscn" id="2_taavv"]
+[ext_resource type="Script" uid="uid://dc0e0edlfwhkm" path="res://Core/entity_manager.gd" id="3_bvohw"]
+[ext_resource type="PackedScene" uid="uid://dpiq152rngtsl" path="res://Scenes/Enemy/Slime/SlimeBasic.tscn" id="4_6daec"]
+[ext_resource type="Script" uid="uid://dno8v7yo1vcg3" path="res://Core/progression_manager.gd" id="4_kg431"]
+[ext_resource type="PackedScene" uid="uid://f7bn0xh3reqo" path="res://Scenes/Enemy/Slime/SlimeGuard.tscn" id="5_h02sy"]
+[ext_resource type="PackedScene" uid="uid://c8iksxdwtg4oa" path="res://Scenes/Enemy/Slime/SlimeRunner.tscn" id="6_y6eu0"]
+[ext_resource type="Script" uid="uid://c23857hm7iu1" path="res://Core/spawn_manager.gd" id="8_6daec"]
+[ext_resource type="Script" uid="uid://dkt233f3al23o" path="res://Core/wave_manager.gd" id="9_h02sy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1sb"]
+resource_name = "Himmel"
+texture = ExtResource("1_bvohw")
+texture_region_size = Vector2i(13, 13)
+55:2/size_in_atlas = Vector2i(10, 7)
+55:2/0 = 0
+66:2/size_in_atlas = Vector2i(11, 10)
+66:2/0 = 0
+44:28/size_in_atlas = Vector2i(9, 7)
+44:28/0 = 0
+63:53/size_in_atlas = Vector2i(1, 6)
+63:53/0 = 0
+17:50/size_in_atlas = Vector2i(6, 2)
+17:50/0 = 0
+64:59/size_in_atlas = Vector2i(11, 2)
+64:59/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6ygn0"]
+tile_size = Vector2i(13, 13)
+sources/1 = SubResource("TileSetAtlasSource_ro1sb")
+
+[node name="MainScene" type="Node2D" unique_id=1545543882]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=101438099]
+z_index = -1
+
+[node name="Layer1" type="TileMapLayer" parent="TileMapLayer" unique_id=829518565]
+use_parent_material = true
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAEAAMAAQAsABwAAAAEAAoAAQAsABwAAAAEABEAAQAsABwAAAAEABgAAQAsABwAAAAMABYAAQAsABwAAAAMAA8AAQAsABwAAAAJAAkAAQAsABwAAAAMAAIAAQAsABwAAAATAAQAAQAsABwAAAARAAkAAQAsABwAAAAaAA4AAQAsABwAAAAVABMAAQAsABwAAAAUAA8AAQAsABwAAAAYABgAAQAsABwAAAASABgAAQAsABwAAAAhABgAAQAsABwAAAAdABQAAQAsABwAAAAXABUAAQAsABwAAAAoABIAAQAsABwAAAApABcAAQAsABwAAAAjABMAAQAsABwAAAAjABAAAQAsABwAAAApAA0AAQAsABwAAAAfAAkAAQAsABwAAAAoAAcAAQAsABwAAAAkAAwAAQAsABwAAAAhAAQAAQAsABwAAAAaAAMAAQAsABwAAAAYAAgAAQAsABwAAAAoAAIAAQAsABwAAAAhAAAAAQAsABwAAAASAAAAAQAsABwAAAA=")
+tile_set = SubResource("TileSet_6ygn0")
+
+[node name="Player" parent="." unique_id=1090090882 instance=ExtResource("2_taavv")]
+position = Vector2(593, 345)
+
+[node name="ProgressionManager" type="Node" parent="." unique_id=1717887168]
+script = ExtResource("4_kg431")
+
+[node name="EntityManager" type="Node" parent="." unique_id=1064859433]
+script = ExtResource("3_bvohw")
+basic = Array[PackedScene]([ExtResource("4_6daec")])
+unique = Array[PackedScene]([ExtResource("5_h02sy")])
+boss = Array[PackedScene]([ExtResource("6_y6eu0")])
+
+[node name="SpawnManager" type="Node" parent="." unique_id=860746674 node_paths=PackedStringArray("entity_manager")]
+script = ExtResource("8_6daec")
+entity_manager = NodePath("../EntityManager")
+
+[node name="WaveManager" type="Node" parent="." unique_id=679862255 node_paths=PackedStringArray("spawn_manager")]
+script = ExtResource("9_h02sy")
+spawn_manager = NodePath("../SpawnManager")

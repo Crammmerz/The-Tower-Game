@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EntityDefinition" format=3 uid="uid://kdm5wyaqtpkw"]
+
+[ext_resource type="Script" uid="uid://b16l7muoxhn6m" path="res://Common/Resource/entity_definition.gd" id="1_lu2xx"]
+
+[resource]
+script = ExtResource("1_lu2xx")
+species = "slime_guard"
+max_health = 20.0
+move_speed = 50.0
+strength = 5.0
+defense = 2.0
+hp_modifier = 0.012
+str_modifier = 0.005
+def_modifier = 0.015

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EntityDefinition" format=3 uid="uid://dp47cdrmjsfmd"]
+
+[ext_resource type="Script" uid="uid://b16l7muoxhn6m" path="res://Common/Resource/entity_definition.gd" id="1_jvg6o"]
+
+[resource]
+script = ExtResource("1_jvg6o")
+species = "slime_runner"
+max_health = 10.0
+move_speed = 120.0
+strength = 5.0
+hp_modifier = 0.001
+str_modifier = 0.005
+def_modifier = 0.002
