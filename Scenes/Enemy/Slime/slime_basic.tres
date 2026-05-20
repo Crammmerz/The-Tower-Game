@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_1tfxy")
 species = "slime_basic"
-max_health = 20.0
+max_health = 10.0
 move_speed = 70.0
 strength = 5.0
 hp_modifier = 0.01

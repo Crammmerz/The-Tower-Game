@@ -1,17 +1,22 @@
 extends Resource
 class_name EntityDefinition
 
+@export_group("Identity")
 @export var species: String = "player"
 @export var faction: String = "enemy"
-@export var can_move: bool = true
-@export var exp_value: int = 10
+
+@export_group("Progression")
+@export var exp_value: float = 10
 
 @export_group("Health")
 @export var max_health: float = 100.0
 @export var hp_regen_amount: float = 0.0
 
-@export_group("Movement & Combat")
+@export_group("Movement")
 @export var move_speed: float = 0.0
+@export var can_move: bool = true
+
+@export_group("Combat")
 @export var strength: float = 10.0
 @export var defense: float = 0.0
 
@@ -22,3 +27,11 @@ class_name EntityDefinition
 @export var str_modifier: float = 1.0
 @export var def_modifier: float = 1.0
 @export var cd_reduction: float = 1.0
+
+
+var total_max_hp: float = 0.0
+var total_str: float = 0.0
+var current_hp: float = 0.0
+
+func recalc_stats():
+	total_max_hp = max_health * hp_modifier

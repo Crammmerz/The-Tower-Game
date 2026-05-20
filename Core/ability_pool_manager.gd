@@ -12,7 +12,7 @@ func initialize_pool(data: AbilityDefinition):
 	var index = 0
 	
 	var timer = Timer.new()
-	timer.wait_time = 0.01 # 10ms per batch
+	timer.wait_time = 0.001 # 10ms per batch
 	timer.one_shot = false
 	add_child(timer)
 	

@@ -12,6 +12,8 @@ func _ready() -> void:
 	if has_node("DamageTimer"):
 		tick = $DamageTimer
 		tick.timeout.connect(_on_tick_timeout)
+	
+	
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Hurtbox:

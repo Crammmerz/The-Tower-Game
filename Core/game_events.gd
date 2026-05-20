@@ -7,7 +7,7 @@ signal wave_end()
 signal all_waves_cleared()
 
 signal player_registered(player_node)
-signal player_leveled_up(new_level)
+signal player_leveled_up(level: int)
 signal player_damaged(current_hp, max_hp)
 
 

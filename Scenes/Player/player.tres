@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_1egl0")
+species = "Tower"
 faction = "player"
-can_move = false
 move_speed = 100.0
+can_move = false

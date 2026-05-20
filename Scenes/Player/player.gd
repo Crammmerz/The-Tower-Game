@@ -2,12 +2,10 @@ extends CharacterBody2D
 
 @onready var anim = $Animation
 @export var profile: EntityDefinition
-var current_health
 
 func _ready() -> void:
 	if profile:
 		profile = profile.duplicate()
-		current_health = profile.max_health
 		GameEvents.register_player(self)
 
 func _physics_process(_delta: float) -> void:
@@ -16,8 +14,6 @@ func _physics_process(_delta: float) -> void:
 	update_animations()
 
 func handle_movement_input() -> void:
-	if not profile: return
-	if not profile.can_move: return
 	var input_direction = Vector2.ZERO
 	
 	input_direction = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
@@ -32,10 +28,10 @@ func update_animations() -> void:
 		anim.play("Move")
 
 func take_damage(value) -> void:
-	current_health -= value
+	profile.current_hp -= value
 	flash_hit_effect()
-	if current_health <= 0:
-		print(current_health)
+	if profile.current_hp <= 0:
+		pass
 
 func flash_hit_effect():
 	var tween = create_tween()

@@ -20,6 +20,10 @@ func level_up():
 	level += 1
 	current_xp = 0
 	xp_to_next_level *= 1.2
-	
+	print("Emitting Level: ", level)
 	GameEvents.player_leveled_up.emit(level)
-	print("LEVEL UP! Current Level: ", level)
+
+func reset():
+	current_xp = 0
+	level = 1
+	xp_to_next_level = 100

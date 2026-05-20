@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cx88p8jwimxcx" path="res://Core/hurtbox.gd" id="5_kvusx"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="5_ufity"]
 [ext_resource type="Script" uid="uid://uc674y5gcr5p" path="res://Core/ability_manager.gd" id="7_jhrqm"]
-[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Scenes/Abilities/Projectile/arrow_projectile.tres" id="9_141we"]
+[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Scenes/Trait/Actives/Projectile/arrow_projectile.tres" id="9_141we"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kotpw"]
 atlas = ExtResource("3_3auub")
@@ -175,16 +175,19 @@ animation = &"Move"
 frame_progress = 0.99989134
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1950966059]
+monitoring = false
 script = ExtResource("5_kvusx")
 
 [node name="Rectangle" type="CollisionShape2D" parent="HurtBox" unique_id=591755074]
 shape = SubResource("RectangleShape2D_3auub")
 
 [node name="Detection Range" type="Area2D" parent="." unique_id=342875766]
+monitorable = false
 script = ExtResource("4_avjtm")
 faction = "player"
 
 [node name="Circle" type="CollisionShape2D" parent="Detection Range" unique_id=1886814395]
+visible = false
 shape = SubResource("CircleShape2D_7pk37")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=330703290]

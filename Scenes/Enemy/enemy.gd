@@ -1,13 +1,10 @@
 extends CharacterBody2D
 
-@export var def: EntityDefinition
-var profile: EntityDefinition
+@export var profile: EntityDefinition
 
 @onready var anim = $Animation
 @onready var hitbox = $Hitbox
 @onready var hurtbox = $HurtBox
-
-var current_health
 
 func _ready() -> void:
 	deactivate()
@@ -26,14 +23,13 @@ func _physics_process(_delta: float) -> void:
 
 func scale_stats():
 	var wave = GameEvents.current_wave
-	profile = def.duplicate()
 	
-	# Use a lower multiplier for Strength so player isn't one-shotted too early
-	var hp_factor = 1.0 + (def.hp_modifier * (wave * 0.25))
-	var str_factor = 1.0 + (def.str_modifier * (wave * 0.05)) # Scale strength slower
+	var hp_factor = 1.0 + (profile.hp_modifier * (wave - 5))
+	var str_factor = 1.0 + (profile.str_modifier * (wave - 5))
 	
-	current_health = round(profile.max_health * hp_factor)
-	profile.strength = round(profile.strength * str_factor)
+	profile.total_max_hp = round(profile.max_health * hp_factor)
+	profile.total_str = round(profile.strength * str_factor)
+	profile.current_hp = profile.total_max_hp
 
 func activate(summon_pos: Vector2):
 	global_position = summon_pos
@@ -66,13 +62,14 @@ func deactivate():
 	global_position = Vector2(-9999, -9999)
 
 func take_damage(amount: float) -> void:
-	var final_damage = max(amount - profile.defense, 1)
-	
-	current_health -= final_damage
+	var total_def = profile.defense * profile.def_modifier
+	var reduction = total_def / (total_def + 100.0)
+	var final_damage = amount * (1.0 - reduction)
+	profile.current_hp -= final_damage
 	
 	flash_hit_effect()
 	
-	if current_health <= 0:
+	if profile.current_hp <= 0:
 		die()
 
 func flash_hit_effect():
@@ -88,4 +85,4 @@ func get_faction(): return "enemy"
 
 func _on_hitbox_hit_registered(target: Node2D) -> void:
 	if target.has_method("take_damage"):
-		target.take_damage(profile.strength)
+		target.take_damage(profile.total_str)

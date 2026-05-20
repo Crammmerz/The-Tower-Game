@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 AbilityPoolManager="*uid://cr51pcboalonm"
 EntityPoolManager="*uid://c2hntvis2r5w1"
 GameEvents="*uid://cv60xhe7w5x3u"
-ProgressionManager="*uid://dno8v7yo1vcg3"
 
 [global_group]
 

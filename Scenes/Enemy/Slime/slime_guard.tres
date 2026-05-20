@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_lu2xx")
 species = "slime_guard"
-max_health = 20.0
+max_health = 10.0
 move_speed = 50.0
 strength = 5.0
 defense = 2.0

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://cuyry1qar4s6l"]
 
-[ext_resource type="PackedScene" uid="uid://bsig2hfc6mdxc" path="res://Scenes/Abilities/Overdrive/Overdrive.tscn" id="1_sofpx"]
+[ext_resource type="PackedScene" uid="uid://bsig2hfc6mdxc" path="res://Scenes/Trait/Actives/Overdrive/Overdrive.tscn" id="1_sofpx"]
 [ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Common/Resource/ability_definition.gd" id="2_jluad"]
 
 [resource]

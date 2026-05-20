@@ -2,7 +2,7 @@ extends Area2D
 
 signal nearest_target_signal(nearest_target)
 
-@export var faction: String = "Enemy"
+@export var faction: String = "enemy"
 
 var targets_in_range: Array[Node2D] = []
 var nearest_target: Node2D = null
@@ -27,13 +27,13 @@ func _on_area_exited(area: Area2D) -> void:
 		var body = area.get_parent()
 		if body in targets_in_range:
 			targets_in_range.erase(body)
-			
+
 func get_nearest_target(origin: Vector2) -> Node2D:
 	if targets_in_range.is_empty():
 		return null
 	
 	var nearest = null
-	var min_dist = INF # Use Infinity for initial comparison
+	var min_dist = INF
 	
 	for t in targets_in_range:
 		if is_instance_valid(t):

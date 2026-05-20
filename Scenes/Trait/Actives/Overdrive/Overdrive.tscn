@@ -1,38 +1,38 @@
 [gd_scene format=3 uid="uid://bsig2hfc6mdxc"]
 
-[ext_resource type="Script" uid="uid://bciomf53tcfom" path="res://Scenes/Abilities/Overdrive/overdrive.gd" id="1_ija6j"]
+[ext_resource type="Script" uid="uid://bciomf53tcfom" path="res://Scenes/Trait/Actives/Overdrive/overdrive.gd" id="1_ija6j"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="2_fu3jj"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_65ab8"]
-atlas = ExtResource("2_fu3jj")
-region = Rect2(192, 576, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dycrq"]
 atlas = ExtResource("2_fu3jj")
 region = Rect2(992, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3y0gi"]
-atlas = ExtResource("2_fu3jj")
-region = Rect2(192, 576, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_iajfb"]
 atlas = ExtResource("2_fu3jj")
 region = Rect2(960, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bvfi"]
+atlas = ExtResource("2_fu3jj")
+region = Rect2(960, 0, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmpg3"]
+atlas = ExtResource("2_fu3jj")
+region = Rect2(992, 0, 32, 31)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yfhkp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_65ab8")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_dycrq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3y0gi")
+"texture": SubResource("AtlasTexture_iajfb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iajfb")
+"texture": SubResource("AtlasTexture_3bvfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmpg3")
 }],
 "loop": true,
 "name": &"default",
@@ -44,4 +44,4 @@ script = ExtResource("1_ija6j")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=941307725]
 sprite_frames = SubResource("SpriteFrames_yfhkp")
-frame_progress = 0.06022918
+frame_progress = 0.63590133

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EntityDefinition" format=3 uid="uid://b8sehttothfm"]
+
+[ext_resource type="Script" uid="uid://b16l7muoxhn6m" path="res://Common/Resource/entity_definition.gd" id="1_vvckt"]
+
+[resource]
+script = ExtResource("1_vvckt")
+species = "slime_basic"
+exp_value = 50
+max_health = 55.0
+move_speed = 50.0
+defense = 5.0
+hp_modifier = 0.05
+str_modifier = 0.05

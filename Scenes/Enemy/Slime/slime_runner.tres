@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_jvg6o")
 species = "slime_runner"
-max_health = 10.0
+max_health = 5.0
 move_speed = 120.0
 strength = 5.0
 hp_modifier = 0.001

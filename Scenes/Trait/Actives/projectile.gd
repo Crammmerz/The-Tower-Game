@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 500
+@export var speed = 500
 var def: AbilityDefinition
 var body: Node2D
 

@@ -5,6 +5,7 @@ class_name AbilityDefinition
 @export var name: String = "New Skill"
 @export_multiline var description: String
 
+
 @export_group("Stats")
 @export var base_value: float
 @export var cooldown: float
