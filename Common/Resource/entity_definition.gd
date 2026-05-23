@@ -28,10 +28,12 @@ class_name EntityDefinition
 @export var def_modifier: float = 1.0
 @export var cd_reduction: float = 1.0
 
-
+var is_immune: bool = false
 var total_max_hp: float = 0.0
 var total_str: float = 0.0
 var current_hp: float = 0.0
 
 func recalc_stats():
+	var past_hp = max_health
 	total_max_hp = max_health * hp_modifier
+	current_hp = total_max_hp - past_hp

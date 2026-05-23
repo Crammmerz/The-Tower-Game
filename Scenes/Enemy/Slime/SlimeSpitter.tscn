@@ -173,7 +173,7 @@ position = Vector2(0, -32)
 scale = Vector2(2.5526316, 2.65)
 sprite_frames = SubResource("SpriteFrames_1qnxf")
 animation = &"idle"
-frame_progress = 0.017633397
+frame_progress = 0.21907987
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=592592554]
 visible = false

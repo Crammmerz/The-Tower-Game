@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cd8qmbs5f6431"]
+
+[ext_resource type="Script" uid="uid://8f0hvsc64byw" path="res://Scenes/Trait/Passives/Movement/movement.gd" id="1_wyg3g"]
+
+[node name="Movement" type="Node2D" unique_id=517774095]
+script = ExtResource("1_wyg3g")

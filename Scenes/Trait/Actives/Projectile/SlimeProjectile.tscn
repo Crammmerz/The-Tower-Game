@@ -63,4 +63,5 @@ sprite_frames = SubResource("SpriteFrames_mstm4")
 frame_progress = 0.215262
 
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="Hitbox" method="_on_area_exited"]
 [connection signal="hit_registered" from="Hitbox" to="." method="_on_hitbox_hit_registered"]

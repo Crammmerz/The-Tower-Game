@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _on_detection_range_nearest_target_signal(nearest_target: Variant) -> void:
 	if nearest_target == null:
+		entity.set_physics_process(true)
 		current_target = null
 		tick.stop() # Turn off the clock if there are no enemies around to save CPU cycles
 		return

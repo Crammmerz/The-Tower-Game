@@ -7,6 +7,7 @@ func _ready() -> void:
 	if profile:
 		profile = profile.duplicate()
 		GameEvents.register_player(self)
+		self.set_physics_process(false)
 
 func _physics_process(_delta: float) -> void:
 	handle_movement_input()
@@ -28,10 +29,11 @@ func update_animations() -> void:
 		anim.play("Move")
 
 func take_damage(value) -> void:
+	if profile.is_immune: return
 	profile.current_hp -= value
 	flash_hit_effect()
 	if profile.current_hp <= 0:
-		pass
+		GameEvents.emit_signal("player_died")
 
 func flash_hit_effect():
 	var tween = create_tween()

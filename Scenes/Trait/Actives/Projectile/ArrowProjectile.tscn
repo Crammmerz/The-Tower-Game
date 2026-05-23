@@ -25,4 +25,5 @@ region_enabled = true
 region_rect = Rect2(717, 6, 35, 9)
 
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="Hitbox" method="_on_area_exited"]
 [connection signal="hit_registered" from="Hitbox" to="." method="_on_hitbox_hit_registered"]

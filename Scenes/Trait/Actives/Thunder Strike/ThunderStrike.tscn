@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bupm634vl8it3"]
+
+[ext_resource type="Texture2D" uid="uid://brb587pyhtd0l" path="res://Asset/Sprites/VFX4/Sprite-sheet/Sprite-sheet.png" id="1_sep0u"]
+[ext_resource type="Texture2D" uid="uid://cy30n8w0ct85d" path="res://Asset/Sprites/VFX5/Sprite-sheet/Sprite-sheet.png" id="2_0gx87"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfm16"]
+atlas = ExtResource("1_sep0u")
+region = Rect2(0, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaveo"]
+atlas = ExtResource("1_sep0u")
+region = Rect2(128, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qblyn"]
+atlas = ExtResource("1_sep0u")
+region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2sf5"]
+atlas = ExtResource("1_sep0u")
+region = Rect2(384, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uat01"]
+atlas = ExtResource("1_sep0u")
+region = Rect2(512, 0, 128, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_th1fm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfm16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaveo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qblyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2sf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uat01")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fpoi"]
+atlas = ExtResource("2_0gx87")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eemqu"]
+atlas = ExtResource("2_0gx87")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkb4r"]
+atlas = ExtResource("2_0gx87")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koef0"]
+atlas = ExtResource("2_0gx87")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq12t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fpoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eemqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkb4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koef0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Thunder Strike" type="Node2D" unique_id=1330733816]
+
+[node name="Anim1" type="AnimatedSprite2D" parent="." unique_id=485632481]
+position = Vector2(3, -383)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_th1fm")
+frame = 4
+frame_progress = 1.0
+
+[node name="Anim2" type="AnimatedSprite2D" parent="." unique_id=1437732206]
+position = Vector2(0, -1)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_kq12t")
+frame = 3
+frame_progress = 1.0

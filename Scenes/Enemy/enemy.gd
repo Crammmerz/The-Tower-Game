@@ -62,6 +62,7 @@ func deactivate():
 	global_position = Vector2(-9999, -9999)
 
 func take_damage(amount: float) -> void:
+	if profile.is_immune: return
 	var total_def = profile.defense * profile.def_modifier
 	var reduction = total_def / (total_def + 100.0)
 	var final_damage = amount * (1.0 - reduction)

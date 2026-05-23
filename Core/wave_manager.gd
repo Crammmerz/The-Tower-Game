@@ -1,16 +1,17 @@
 extends Node
 
-@export var spawn_manager: Node # You MUST link your SpawnManager here in the Inspector 
+@export var spawn_manager: Node
 @export var max_waves: int = 20
+@export var infitnite: bool = false
 
-var wave_counter: int = 0
+var wave_counter: int = 9
 var wave_delay: float = 1.0
 var kill_count: int = 0
-var total_enemies_in_wave: int = 0 # Track how many enemies need to die 
+var total_enemies_in_wave: int = 0
 
 var wave_data = { #
-	1: {"basic": 5},
-	2: {"basic": 8, "unique": 3},
+	1: {"basic": 5, "unique": 1},
+	2: {"basic": 5, "unique": 3},
 	3: {"basic": 10, "unique": 6},
 	5: {"boss": 1, "unique": 3, "basic": 5}
 }
@@ -21,6 +22,7 @@ func _ready() -> void:
 	GameEvents.enemy_died.connect(_on_enemy_died)
 	GameEvents.wave_end.connect(start_wave)
 	EntityPoolManager.entity_pool_loaded.connect(start_wave)
+	if infitnite: GameEvents.wave_end.connect(increment_wave)
 
 func start_wave():
 	if wave_counter >= max_waves:
@@ -64,8 +66,8 @@ func get_wave_config(wave_num: int) -> Dictionary:
 
 func _generate_procedural_wave(wave_num: int) -> Dictionary:
 	return {
-		"basic": 5 + wave_num * 2,
-		"unique": (2 if wave_num % 3 == 0 else 0) * randi_range(2, 5),
+		"basic": min(5 + wave_num * 2, 80),
+		"unique": (2 if (wave_num % 3 == 0 or wave_num % 5 == 0) else 0) * randi_range(2, 5),
 		"boss": 1 if wave_num % 5 == 0 else 0
 	}
 
@@ -73,3 +75,5 @@ func _on_enemy_died(_enemy_node):
 	kill_count += 1
 	if kill_count >= total_enemies_in_wave:
 		GameEvents.wave_end.emit()
+
+func increment_wave(): max_waves += 1

@@ -2,6 +2,9 @@ extends Node
 
 
 signal game_start()
+signal game_end()
+signal game_completed()
+
 signal wave_started(wave_number: int)
 signal wave_end()
 signal all_waves_cleared()
@@ -9,7 +12,7 @@ signal all_waves_cleared()
 signal player_registered(player_node)
 signal player_leveled_up(level: int)
 signal player_damaged(current_hp, max_hp)
-
+signal player_died()
 
 signal enemy_died(enemy_node)
 
