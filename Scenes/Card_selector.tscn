@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddgmbihnaqavj"]
 
+[ext_resource type="Script" uid="uid://bd500npfm64tw" path="res://card_control.gd" id="1_osw8u"]
 [ext_resource type="Texture2D" uid="uid://dyqvmgkk07247" path="res://Asset/Sprites/UI_card2.png" id="1_qmtvw"]
 [ext_resource type="Texture2D" uid="uid://vcjijyg01l4y" path="res://Asset/Sprites/UI_scroll.png" id="2_adgew"]
 [ext_resource type="Texture2D" uid="uid://er42xuyg7hvg" path="res://Asset/Sprites/UI_card3.png" id="2_osw8u"]
@@ -16,13 +17,35 @@ corner_radius_bottom_left = 10
 atlas = ExtResource("1_qmtvw")
 region = Rect2(10.98877, 28.215998, 323.23462, 671.89014)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ppk5n"]
-atlas = ExtResource("2_osw8u")
-region = Rect2(11.000519, 22.245613, 322.0004, 671.00525)
+[sub_resource type="GDScript" id="GDScript_i50le"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	$Label1.text = \"Skill 1!\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmtvw"]
+atlas = ExtResource("3_i50le")
+region = Rect2(12.863922, 23.5616, 320.30746, 666.53076)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83ew5"]
 atlas = ExtResource("3_i50le")
 region = Rect2(12.863922, 23.5616, 320.30746, 666.53076)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppk5n"]
+atlas = ExtResource("2_osw8u")
+region = Rect2(11.000519, 25.770275, 320.13992, 667.4806)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pey7v"]
 atlas = ExtResource("2_adgew")
@@ -30,13 +53,21 @@ region = Rect2(160.64047, 144.44437, 94.9073, 31.342941)
 
 [node name="Card_Selector" type="Node2D" unique_id=1229782008]
 
-[node name="Panel" type="Panel" parent="." unique_id=1946843061]
+[node name="Card_control" type="Control" parent="." unique_id=1311888348]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_osw8u")
+
+[node name="Panel" type="Panel" parent="Card_control" unique_id=1946843061]
 clip_children = 2
+layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qmtvw")
 
-[node name="Card1" type="TextureButton" parent="Panel" unique_id=1539828556]
+[node name="Card1" type="TextureButton" parent="Card_control" unique_id=1539828556]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 192.0
@@ -44,8 +75,52 @@ offset_right = 419.0
 offset_bottom = 865.0
 scale = Vector2(0.75, 0.6)
 texture_normal = SubResource("AtlasTexture_3n6ya")
+texture_pressed = SubResource("AtlasTexture_3n6ya")
+texture_hover = SubResource("AtlasTexture_3n6ya")
+script = SubResource("GDScript_i50le")
 
-[node name="Card2" type="TextureButton" parent="Panel" unique_id=416529762]
+[node name="Label1" type="RichTextLabel" parent="Card_control/Card1" unique_id=1057253820]
+layout_mode = 0
+offset_left = 38.66667
+offset_top = 381.66666
+offset_right = 5025.3335
+offset_bottom = 5414.9995
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.4745838, 0, 0.006456644, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 500
+bbcode_enabled = true
+text = "[center]Skill[/center]"
+fit_content = true
+
+[node name="Card2" type="TextureButton" parent="Card_control" unique_id=2037121735]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 192.0
+offset_right = 801.0
+offset_bottom = 916.0
+scale = Vector2(0.75, 0.6)
+texture_normal = SubResource("AtlasTexture_qmtvw")
+texture_pressed = SubResource("AtlasTexture_83ew5")
+texture_hover = SubResource("AtlasTexture_qmtvw")
+
+[node name="Label2" type="RichTextLabel" parent="Card_control/Card2" unique_id=1099037406]
+layout_mode = 0
+offset_left = 39.999992
+offset_top = 379.99997
+offset_right = 5026.666
+offset_bottom = 5413.333
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 500
+bbcode_enabled = true
+text = "[center]Skill[/center]"
+fit_content = true
+
+[node name="Card3" type="TextureButton" parent="Card_control" unique_id=416529762]
 layout_mode = 0
 offset_left = 800.0
 offset_top = 192.0
@@ -53,22 +128,30 @@ offset_right = 1145.0
 offset_bottom = 916.0
 scale = Vector2(0.75, 0.6)
 texture_normal = SubResource("AtlasTexture_ppk5n")
+texture_pressed = SubResource("AtlasTexture_ppk5n")
+texture_hover = SubResource("AtlasTexture_ppk5n")
 
-[node name="Card3" type="TextureButton" parent="Panel" unique_id=2037121735]
+[node name="Label3" type="RichTextLabel" parent="Card_control/Card3" unique_id=528519759]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 192.0
-offset_right = 801.0
-offset_bottom = 916.0
-scale = Vector2(0.75, 0.6)
-texture_normal = SubResource("AtlasTexture_83ew5")
+offset_left = 34.666687
+offset_top = 388.3333
+offset_right = 5234.6665
+offset_bottom = 5288.3335
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 500
+bbcode_enabled = true
+text = "[center]Skill[/center]"
+fit_content = true
 
 [node name="Title" type="Sprite2D" parent="." unique_id=1694001900]
 position = Vector2(576, 94.21874)
 scale = Vector2(6.568421, 3.3886714)
 texture = SubResource("AtlasTexture_pey7v")
 
-[node name="Control" type="Control" parent="Title" unique_id=1552147328]
+[node name="Text_control" type="Control" parent="Title" unique_id=1552147328]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -30.448719
@@ -76,7 +159,7 @@ offset_top = -3.6057625
 offset_right = 9.551281
 offset_bottom = 36.394238
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Title/Control" unique_id=2032533857]
+[node name="RichTextLabel" type="RichTextLabel" parent="Title/Text_control" unique_id=2032533857]
 layout_mode = 0
 offset_left = 2.4358974
 offset_top = 1.7706053
@@ -87,3 +170,5 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/normal_font_size = 150
 text = "Choose a Card"
+
+[connection signal="pressed" from="Card_control/Card1" to="Card_control/Card1" method="_on_pressed"]
