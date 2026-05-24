@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dis23sq0jhkjf"]
 
-[ext_resource type="Script" uid="uid://el2hgteotfcp" path="res://Scenes/Enemy/enemy.gd" id="1_8ux4v"]
+[ext_resource type="Script" uid="uid://hwlhtac4x7sr" path="res://Scenes/Enemy/enemy.gd" id="1_8ux4v"]
 [ext_resource type="Resource" uid="uid://b8sehttothfm" path="res://Scenes/Enemy/Slime/slime_king.tres" id="2_8ux4v"]
 [ext_resource type="Texture2D" uid="uid://bsfb5folxnnox" path="res://Asset/Sprites/Slime/Dead/Dead_Violet_32.png" id="3_8ux4v"]
 [ext_resource type="Texture2D" uid="uid://do7ok2nlxcso8" path="res://Asset/Sprites/Slime/Walk/Walk_Violet_32.png" id="4_irtd1"]

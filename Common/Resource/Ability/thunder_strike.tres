@@ -7,5 +7,5 @@
 script = ExtResource("2_0a0uf")
 name = "Thuder Strike"
 base_value = 10.0
-cooldown = 5.0
+cooldown = 3.0
 scene = ExtResource("1_s0sgi")
