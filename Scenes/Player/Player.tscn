@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cx88p8jwimxcx" path="res://Core/hurtbox.gd" id="5_kvusx"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="5_ufity"]
 [ext_resource type="Script" uid="uid://uc674y5gcr5p" path="res://Core/ability_manager.gd" id="7_jhrqm"]
-[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Scenes/Trait/Actives/Projectile/arrow_projectile.tres" id="9_141we"]
+[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Common/Resource/Ability/arrow_projectile.tres" id="10_0kmp4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kotpw"]
 atlas = ExtResource("3_3auub")
@@ -173,7 +173,7 @@ scale = Vector2(1.0731908, 0.9578125)
 sprite_frames = SubResource("SpriteFrames_wgo1r")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.53023976
+frame_progress = 0.51686627
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1950966059]
 script = ExtResource("5_kvusx")
@@ -207,7 +207,7 @@ player = NodePath("..")
 
 [node name="AbilityManager" type="Node" parent="." unique_id=402996791]
 script = ExtResource("7_jhrqm")
-test = ExtResource("9_141we")
+test = ExtResource("10_0kmp4")
 
 [connection signal="body_entered" from="HurtBox" to="HurtBox" method="_on_body_entered"]
 [connection signal="area_entered" from="Detection Range" to="Detection Range" method="_on_area_entered"]

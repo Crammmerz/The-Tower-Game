@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="StatCardData" format=3 uid="uid://dmauxi763jamd"]
+
+[ext_resource type="Script" uid="uid://c20vr1nwnx7wb" path="res://Common/Resource/stat_card_definition.gd" id="1_rf86s"]
+
+[resource]
+script = ExtResource("1_rf86s")

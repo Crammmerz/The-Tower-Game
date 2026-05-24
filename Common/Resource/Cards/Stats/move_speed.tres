@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatCardData" format=3 uid="uid://jhayfl17l2f2"]
+
+[ext_resource type="Script" uid="uid://c20vr1nwnx7wb" path="res://Common/Resource/stat_card_definition.gd" id="1_2yhxq"]
+
+[resource]
+script = ExtResource("1_2yhxq")
+change_value = 40.0
+card_name = "Runner's Lungs"
+card_description = "Improves the character’s agility, allowing faster movement across the battlefield. Higher move speed enables quicker repositioning, smoother dodging, and more efficient pursuit or retreat. (+40 Move Speed)"
+weight = 45

@@ -5,14 +5,11 @@ extends Node2D
 
 @onready var hitbox: Area2D = $Hitbox 
 
-var entity
+var entity: Node2D = null
 
-func activate(host: Node2D):
-	if host and host.has_node("HurtBox"):
-		entity = host
-		hitbox.faction = entity.profile.faction
-	if get_parent() != host:
-		reparent(host, true) 
+func activate():
+	entity = get_parent()
+	hitbox.faction = entity.profile.faction
 
 func _on_area_2d_hit_registered(target: Variant) -> void:
 	if not entity or not entity.get("profile"):

@@ -16,7 +16,7 @@ enum TargetStat {
 @export var change_value: float = 0.0 # Can be positive (buff) or negative (debuff)
 
 func apply_effect() -> void:
-	var prof = GameEvents.player.prof
+	var prof = GameEvents.player.profile
 	match stat_to_upgrade:
 		TargetStat.MAX_HEALTH:
 			prof.max_health += change_value

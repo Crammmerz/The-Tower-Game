@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PassiveAbilityCard" format=3 uid="uid://e8vcvhbmkw6t"]
+
+[ext_resource type="PackedScene" uid="uid://cqslbm08iur0u" path="res://Scenes/Trait/Passives/Barrier/Barrier.tscn" id="1_7n7hr"]
+[ext_resource type="Texture2D" uid="uid://dgj5b7ojgl1xm" path="res://Asset/Sprites/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png" id="2_2iuyr"]
+[ext_resource type="Script" uid="uid://b5hjeapbxekrc" path="res://Common/Resource/passive_ability_definition.gd" id="2_o31b3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2118"]
+atlas = ExtResource("2_2iuyr")
+region = Rect2(292, 3, 16, 18)
+
+[resource]
+script = ExtResource("2_o31b3")
+ability_scene = ExtResource("1_7n7hr")
+card_name = "Barrier"
+card_description = "Deploys a shield that absorbs incoming damage, starting with a base Health value. The shield gains an additional +25 capacity per wave, with its maximum cap increasing further at each wave."
+card_icon = SubResource("AtlasTexture_u2118")
+weight = 25

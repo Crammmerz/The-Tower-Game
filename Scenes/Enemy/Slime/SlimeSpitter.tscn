@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cx88p8jwimxcx" path="res://Core/hurtbox.gd" id="6_mddiw"]
 [ext_resource type="Script" uid="uid://dsee0a1322aax" path="res://Scenes/Player/detection_manager.gd" id="7_1yakf"]
 [ext_resource type="Script" uid="uid://cibxblr06321u" path="res://Scenes/Enemy/Slime/entity_ability.gd" id="8_1yakf"]
-[ext_resource type="Resource" uid="uid://cgaq1vwtel760" path="res://Scenes/Trait/Actives/Projectile/slime_projectile.tres" id="9_sa3pr"]
+[ext_resource type="Resource" uid="uid://cgaq1vwtel760" path="res://Common/Resource/Ability/slime_projectile.tres" id="9_sa3pr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sa3pr"]
 atlas = ExtResource("3_1bkcu")

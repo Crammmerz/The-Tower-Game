@@ -141,7 +141,7 @@ position = Vector2(0, 7.1525574e-07)
 scale = Vector2(20, 20)
 sprite_frames = SubResource("SpriteFrames_5asjy")
 animation = &"active"
-frame_progress = 0.23334919
+frame_progress = 0.5859644
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=702790561]
 monitoring = false

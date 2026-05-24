@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PassiveAbilityCard" format=3 uid="uid://cmxeibfbl68ih"]
+
+[ext_resource type="PackedScene" uid="uid://cd8qmbs5f6431" path="res://Scenes/Trait/Passives/Movement/Movement.tscn" id="1_2kycs"]
+[ext_resource type="Script" uid="uid://b5hjeapbxekrc" path="res://Common/Resource/passive_ability_definition.gd" id="2_l6ggt"]
+[ext_resource type="Texture2D" uid="uid://cflqugu86alua" path="res://Asset/Sprites/Walking_Spritesheet.png" id="2_pxyst"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8b75"]
+atlas = ExtResource("2_pxyst")
+region = Rect2(537, 6, 77, 110)
+
+[resource]
+script = ExtResource("2_l6ggt")
+ability_scene = ExtResource("1_2kycs")
+card_name = "Arachnid Ascension"
+card_description = "The tower manifests spider‑like limbs, granting it mobility across the battlefield. Once rooted in place, it can now crawl forward, reposition strategically, and evade threats while maintaining its defensive capabilities."
+card_icon = SubResource("AtlasTexture_l8b75")
+weight = 5

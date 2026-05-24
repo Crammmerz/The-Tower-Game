@@ -33,6 +33,7 @@ func take_damage(value) -> void:
 	profile.current_hp -= value
 	flash_hit_effect()
 	if profile.current_hp <= 0:
+		print(profile.current_hp)
 		GameEvents.emit_signal("player_died")
 
 func flash_hit_effect():

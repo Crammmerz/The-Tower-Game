@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://bdrqfgbv21lca"]
+
+[ext_resource type="PackedScene" uid="uid://cdgrvkpd114kc" path="res://Scenes/Trait/Actives/Projectile/ArrowProjectile.tscn" id="1_ogrob"]
+[ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Common/Resource/ability_definition.gd" id="2_pypij"]
+
+[resource]
+script = ExtResource("2_pypij")
+name = "Arrow Projectile"
+base_value = 10.0
+cooldown = 2.0
+scene = ExtResource("1_ogrob")
+special_tags = {
+"pierce": 0,
+"require_target": true
+}

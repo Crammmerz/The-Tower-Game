@@ -153,7 +153,6 @@ autoplay = "new_animation"
 frame_progress = 0.59371436
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=521373375]
-visible = false
 script = ExtResource("3_cvliw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1074005464]

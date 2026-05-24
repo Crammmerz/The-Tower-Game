@@ -31,7 +31,7 @@ class_name EntityDefinition
 var is_immune: bool = false
 var total_max_hp: float = 0.0
 var total_str: float = 0.0
-var current_hp: float = 0.0
+var current_hp: float = max_health
 
 func recalc_stats():
 	var past_hp = max_health

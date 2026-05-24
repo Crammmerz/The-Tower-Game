@@ -12,18 +12,12 @@ var entity: Node2D = null
 func _ready() -> void:
 	GameEvents.wave_started.connect(regen)
 
-func activate(host: Node2D):
-	if host and host.has_node("HurtBox"):
-		entity = host
+func activate():
+	entity = get_parent()
+	entity.profile.is_immune = true
 		
-		if get_parent() != host:
-			reparent(host, true) 
-			
-		if entity.get("profile"):
-			entity.profile.is_immune = true
-		
-		self.visible = true
-		anim.play("active")
+	self.visible = true
+	anim.play("active")
 
 func regen(wave):
 	max_hp = 100.0 * (1.0 + (wave * 0.1))

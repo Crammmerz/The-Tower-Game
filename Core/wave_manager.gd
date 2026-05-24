@@ -4,7 +4,7 @@ extends Node
 @export var max_waves: int = 20
 @export var infitnite: bool = false
 
-var wave_counter: int = 0
+var wave_counter: int = 18
 var wave_delay: float = 1.0
 var kill_count: int = 0
 var total_enemies_in_wave: int = 0

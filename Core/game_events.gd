@@ -16,6 +16,8 @@ signal player_died()
 
 signal enemy_died(enemy_node)
 
+signal loading_complete()
+
 var player: Node2D = null
 var current_wave: int = 0
 

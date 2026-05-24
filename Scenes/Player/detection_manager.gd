@@ -7,7 +7,13 @@ signal nearest_target_signal(nearest_target)
 var targets_in_range: Array[Node2D] = []
 var nearest_target: Node2D = null
 
-func _process(_delta: float) -> void:
+var check_interval: float = 0.15
+var time_since_last_check: float = 0.0
+
+func _process(delta: float) -> void:
+	time_since_last_check += delta
+	if time_since_last_check < check_interval:
+		return
 	targets_in_range = targets_in_range.filter(func(t): return is_instance_valid(t))
 	
 	var new_target = get_nearest_target(global_position)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PassiveAbilityCard" format=3 uid="uid://ow4ncfinsl6j"]
+
+[ext_resource type="PackedScene" uid="uid://cxjyf57x42k51" path="res://Scenes/Trait/Passives/FireZone/FireZone.tscn" id="1_hp4ew"]
+[ext_resource type="Script" uid="uid://b5hjeapbxekrc" path="res://Common/Resource/passive_ability_definition.gd" id="2_okq0i"]
+[ext_resource type="Texture2D" uid="uid://d0aa28odvtkm7" path="res://Asset/Sprites/500 Bullet 24x24 Free/Bullet 24x24 Part 5A Free.png" id="2_oygvt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnjk1"]
+atlas = ExtResource("2_oygvt")
+region = Rect2(195, 3, 18, 18)
+
+[resource]
+script = ExtResource("2_okq0i")
+ability_scene = ExtResource("1_hp4ew")
+card_name = "Fire Zone"
+card_description = "Creates a blazing hazard zone that continuously damages enemies within its radius. The zone deals a base fire damage of 5.0 per tick, with damage scaling by +0.05 per point of Strength. As the player’s Strength increases, the FireZone becomes progressively more lethal, making it a reliable area‑control ability against waves of enemies."
+card_icon = SubResource("AtlasTexture_lnjk1")

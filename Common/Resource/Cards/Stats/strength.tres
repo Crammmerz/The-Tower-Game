@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatCardData" format=3 uid="uid://dl1ttqkjqj8d"]
+
+[ext_resource type="Script" uid="uid://c20vr1nwnx7wb" path="res://Common/Resource/stat_card_definition.gd" id="1_nuwmx"]
+
+[resource]
+script = ExtResource("1_nuwmx")
+stat_to_upgrade = 3
+change_value = 3.0
+card_name = "Brawler's Grit"
+card_description = "Amplifies the character’s innate power, increasing the potency of attacks and abilities that draw upon raw force. Strength represents the fundamental energy behind combat techniques. (+3 Strength)"
+weight = 45

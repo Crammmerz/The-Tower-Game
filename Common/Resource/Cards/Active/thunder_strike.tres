@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ActiveAbilityCard" format=3 uid="uid://d3aaosg1vufe4"]
+
+[ext_resource type="Resource" uid="uid://bj4a8sce5fjko" path="res://Common/Resource/Ability/thunder_strike.tres" id="1_oe14l"]
+[ext_resource type="Texture2D" uid="uid://b2p4fc6jvnv6p" path="res://Asset/Sprites/VFX2/Frames/lightning_skill2_frame3.png" id="2_d6jtj"]
+[ext_resource type="Script" uid="uid://bls05w87ij02t" path="res://Common/Resource/active_ability_card_definition.gd" id="2_j4k8q"]
+
+[resource]
+script = ExtResource("2_j4k8q")
+ability = ExtResource("1_oe14l")
+card_name = "Thunder Strike"
+card_description = " The player channels raw lightning energy, striking the ground and unleashing a surge of electricity that damages all enemies in range."
+card_icon = ExtResource("2_d6jtj")
+weight = 50

@@ -19,6 +19,7 @@ func gain_xp(amount: int):
 func level_up():
 	level += 1
 	current_xp = 0
+	@warning_ignore("narrowing_conversion")
 	xp_to_next_level *= 1.2
 	print("Emitting Level: ", level)
 	GameEvents.player_leveled_up.emit(level)

@@ -11,6 +11,17 @@
 [ext_resource type="Script" uid="uid://c23857hm7iu1" path="res://Core/spawn_manager.gd" id="8_6daec"]
 [ext_resource type="PackedScene" uid="uid://dis23sq0jhkjf" path="res://Scenes/Enemy/Slime/SlimeKing.tscn" id="8_y6eu0"]
 [ext_resource type="Script" uid="uid://dkt233f3al23o" path="res://Core/wave_manager.gd" id="9_h02sy"]
+[ext_resource type="Script" uid="uid://hlljupfp86do" path="res://Core/card_pool_manager.gd" id="12_lf2bi"]
+[ext_resource type="Resource" uid="uid://d3aaosg1vufe4" path="res://Common/Resource/Cards/Active/thunder_strike.tres" id="14_uyaan"]
+[ext_resource type="Resource" uid="uid://e8vcvhbmkw6t" path="res://Common/Resource/Cards/Passive/barrier.tres" id="15_ouui3"]
+[ext_resource type="Resource" uid="uid://ow4ncfinsl6j" path="res://Common/Resource/Cards/Passive/fire_zone.tres" id="16_0ajgu"]
+[ext_resource type="Resource" uid="uid://cmxeibfbl68ih" path="res://Common/Resource/Cards/Passive/movement.tres" id="17_a4g1y"]
+[ext_resource type="Resource" uid="uid://lo7s4bug80wm" path="res://Common/Resource/Cards/Stats/defense.tres" id="18_0fao8"]
+[ext_resource type="Resource" uid="uid://bv053x5gob4dc" path="res://Common/Resource/Cards/Stats/max_health.tres" id="19_ktl0d"]
+[ext_resource type="Resource" uid="uid://jhayfl17l2f2" path="res://Common/Resource/Cards/Stats/move_speed.tres" id="20_1c2jk"]
+[ext_resource type="Resource" uid="uid://dl1ttqkjqj8d" path="res://Common/Resource/Cards/Stats/strength.tres" id="21_und8f"]
+[ext_resource type="PackedScene" uid="uid://ddgmbihnaqavj" path="res://Scenes/UI/Card_selector.tscn" id="22_mcnm8"]
+[ext_resource type="PackedScene" uid="uid://cmj2yu53r4l58" path="res://Scenes/UI/Loading.tscn" id="23_uyaan"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1sb"]
 resource_name = "Himmel"
@@ -65,3 +76,18 @@ entity_manager = NodePath("../EntityManager")
 [node name="WaveManager" type="Node" parent="." unique_id=679862255 node_paths=PackedStringArray("spawn_manager")]
 script = ExtResource("9_h02sy")
 spawn_manager = NodePath("../SpawnManager")
+infitnite = true
+
+[node name="CardPoolManager" type="Node" parent="." unique_id=665047206]
+script = ExtResource("12_lf2bi")
+available_actives = Array[Resource]([ExtResource("14_uyaan")])
+available_passives = Array[Resource]([ExtResource("15_ouui3"), ExtResource("16_0ajgu"), ExtResource("17_a4g1y")])
+available_stats = Array[Resource]([ExtResource("18_0fao8"), ExtResource("19_ktl0d"), ExtResource("20_1c2jk"), ExtResource("21_und8f")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1883997259]
+
+[node name="Card_Selector" parent="CanvasLayer" unique_id=1229782008 node_paths=PackedStringArray("card_pool_manager") instance=ExtResource("22_mcnm8")]
+process_mode = 2
+card_pool_manager = NodePath("../../CardPoolManager")
+
+[node name="Loading" parent="CanvasLayer" unique_id=135559021 instance=ExtResource("23_uyaan")]
