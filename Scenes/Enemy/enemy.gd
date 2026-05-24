@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var hurtbox = $HurtBox
 
 func _ready() -> void:
+	GameEvents.game_end.connect(deactivate)
 	deactivate()
 
 func _physics_process(_delta: float) -> void:
@@ -32,6 +33,7 @@ func scale_stats():
 	profile.current_hp = profile.total_max_hp
 
 func activate(summon_pos: Vector2):
+	GameEvents.enemy_active.emit()
 	global_position = summon_pos
 	scale_stats()
 	

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bw6oyykhfiur8"]
+
+[ext_resource type="Script" uid="uid://rv2kqrim37a6" path="res://Scenes/UI/Pause/pausemenu.gd" id="1_g3nyb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nycfo"]
+bg_color = Color(0.101960786, 0.07058824, 0.03137255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.6, 0, 1)
+
+[node name="Pause" type="Control" unique_id=1898629010]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3nyb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1045885256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.02745098, 0.011764706, 0.69803923)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=817784952]
+clip_contents = true
+custom_minimum_size = Vector2(300, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nycfo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1873015020]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1330079419]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 48
+text = "⚔ PAUSED ⚔"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1576405532]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 24
+text = "Resume"
+
+[node name="Main_menu" type="Button" parent="PanelContainer/VBoxContainer" unique_id=628011312]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"

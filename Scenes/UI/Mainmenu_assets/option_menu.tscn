@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cmvejc4xdpcsr"]
+
+[ext_resource type="Script" uid="uid://ffipq4mfobro" path="res://Scenes/UI/Mainmenu_assets/option_menu.gd" id="1_ggsak"]
+[ext_resource type="PackedScene" uid="uid://dbe8ulww0wssy" path="res://Scenes/UI/Mainmenu_assets/settings_tab_container.tscn" id="2_7uumt"]
+
+[sub_resource type="SystemFont" id="SystemFont_cq70r"]
+font_names = PackedStringArray("Bodoni MT")
+subpixel_positioning = 0
+
+[node name="option_menu" type="Control" unique_id=289439653]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ggsak")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2117848888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1249125272]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=118281103]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_cq70r")
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_tab_container" parent="MarginContainer/VBoxContainer" unique_id=2002912292 instance=ExtResource("2_7uumt")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1517010575]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+size_flags_vertical = 8
+text = "Exit
+"

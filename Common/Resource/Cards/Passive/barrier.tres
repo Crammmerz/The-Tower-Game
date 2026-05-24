@@ -12,6 +12,6 @@ region = Rect2(292, 3, 16, 18)
 script = ExtResource("2_o31b3")
 ability_scene = ExtResource("1_7n7hr")
 card_name = "Barrier"
-card_description = "Deploys a shield that absorbs incoming damage, starting with a base Health value. The shield gains an additional +25 capacity per wave, with its maximum cap increasing further at each wave."
+card_description = "Deploys a protective barrier that absorbs incoming damage, starting with a base Health value and gaining +25 capacity per wave, with its maximum cap scaling further each wave for stronger defense over time."
 card_icon = SubResource("AtlasTexture_u2118")
 weight = 25

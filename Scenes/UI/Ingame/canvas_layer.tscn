@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://damywwrqdxxf1"]
+
+[ext_resource type="Script" uid="uid://66bnlqn72fn6" path="res://Scenes/UI/Ingame/canvas_layer.gd" id="1_hwult"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwult"]
+bg_color = Color(0.101960786, 0.07058824, 0.03137255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.6, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=67039217]
+layer = 5
+script = ExtResource("1_hwult")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=809623599]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.5
+offset_right = 74.5
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hwult")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1576484696]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer" unique_id=449728528]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 28
+text = "⚔"
+
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1917086340]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 28
+text = "Wave:"
+
+[node name="WaveLabel" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1930177743]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0.7490196, 0.2, 1)
+theme_override_font_sizes/font_size = 28
+text = "0"

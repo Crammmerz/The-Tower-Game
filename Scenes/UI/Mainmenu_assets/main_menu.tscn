@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://drugv7ag5qnxk"]
+
+[ext_resource type="Script" uid="uid://crnexw7c5vbtj" path="res://Scenes/UI/Mainmenu_assets/main_menu.gd" id="1_bh62r"]
+[ext_resource type="Texture2D" uid="uid://cjyax0nekhjrt" path="res://Asset/Sprites/MainMenu.png" id="2_1e84x"]
+[ext_resource type="PackedScene" uid="uid://cmvejc4xdpcsr" path="res://Scenes/UI/Mainmenu_assets/option_menu.tscn" id="2_5yeqd"]
+
+[sub_resource type="SystemFont" id="SystemFont_bh62r"]
+font_names = PackedStringArray("", "MV Boli")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xssu"]
+font_size = 40
+font_color = Color(0.9843137, 0.93333334, 0.827451, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_e843d"]
+font_names = PackedStringArray("Britannic")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_0l3sk"]
+font_names = PackedStringArray("Britannic")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_m0qd8"]
+font_names = PackedStringArray("Britannic")
+subpixel_positioning = 0
+
+[node name="MainMenu" type="Control" unique_id=264918213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 4.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bh62r")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=202282726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = -4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1e84x")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=132360563]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1691974021]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=473880910]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_bh62r")
+theme_override_font_sizes/font_size = 64
+text = "That time I got reincarnated in 
+Fantasy World as Level 1 tower"
+label_settings = SubResource("LabelSettings_0xssu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seperator1" type="Control" parent="MarginContainer" unique_id=1631942851]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=453264791]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1934228072]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Seperator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=135776766]
+layout_mode = 2
+
+[node name="Seperator1" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1324056200]
+layout_mode = 2
+
+[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=581316694]
+layout_mode = 2
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=928058630]
+layout_mode = 2
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1230650796]
+layout_mode = 2
+
+[node name="Start game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1724420933]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_e843d")
+theme_override_font_sizes/font_size = 24
+text = "Start game"
+
+[node name="Option" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=717102037]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_0l3sk")
+theme_override_font_sizes/font_size = 24
+text = "Sound"
+
+[node name="Exit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=512452630]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m0qd8")
+theme_override_font_sizes/font_size = 24
+text = "Exit
+
+"
+
+[node name="option_menu" parent="." unique_id=289439653 instance=ExtResource("2_5yeqd")]
+visible = false
+layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=448610761]
+volume_db = -16.69
+autoplay = true

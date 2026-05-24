@@ -20,6 +20,7 @@ func apply_effect() -> void:
 	match stat_to_upgrade:
 		TargetStat.MAX_HEALTH:
 			prof.max_health += change_value
+			prof.current_hp += change_value
 		TargetStat.HP_REGEN:
 			prof.hp_regen_amount += change_value
 		TargetStat.MOVE_SPEED:

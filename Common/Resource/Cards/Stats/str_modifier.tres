@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatCardData" format=3 uid="uid://dmauxi763jamd"]
+
+[ext_resource type="Script" uid="uid://c20vr1nwnx7wb" path="res://Common/Resource/stat_card_definition.gd" id="1_g0eqo"]
+
+[resource]
+script = ExtResource("1_g0eqo")
+stat_to_upgrade = 6
+change_value = 0.05
+card_name = "Force "
+card_description = "A permanent upgrade that amplifies the impact of your Strength stat, increasing the effectiveness of abilities and scaling damage output proportionally with higher Strength values. (+0.5 Strength Modifier)"
+weight = 5

@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://drugv7ag5qnxk"]
+
+[ext_resource type="Script" uid="uid://dcdkldcdnvn6g" path="res://Main menu/main_menu.gd" id="1_bh62r"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8l8yg"]
+
+[sub_resource type="SystemFont" id="SystemFont_bh62r"]
+font_names = PackedStringArray("", "MV Boli")
+
+[node name="MainMenu" type="Control" unique_id=264918213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 4.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bh62r")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=202282726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_8l8yg")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=132360563]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1691974021]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Seperator1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1631942851]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=473880910]
+layout_mode = 2
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_bh62r")
+theme_override_font_sizes/font_size = 64
+text = "Tower"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=453264791]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1934228072]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Seperator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=135776766]
+layout_mode = 2
+
+[node name="Seperator1" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1324056200]
+layout_mode = 2
+
+[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=581316694]
+layout_mode = 2
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=928058630]
+layout_mode = 2
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1230650796]
+layout_mode = 2
+
+[node name="Start game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1724420933]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start game"
+
+[node name="Option" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=717102037]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Option
+"
+
+[node name="Exit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=512452630]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit
+
+"

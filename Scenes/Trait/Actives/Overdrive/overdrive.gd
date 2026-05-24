@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 func activate(entity: Node2D,_target_pos, data: AbilityDefinition):
 	def = data
 	unit = entity
-	unit.profile.cooldown_reduction += base_value
+	unit.profile.cd_reduction += base_value
 	cdr = base_value
 	current_time = 0.0 
 	
@@ -34,7 +34,7 @@ func activate(entity: Node2D,_target_pos, data: AbilityDefinition):
 	anim.play()
 
 func deactivate():
-	unit.profile.cooldown_reduction -= cdr
+	unit.profile.cd_reduction -= cdr
 	visible = false
 	set_process(false)
 	global_position = Vector2(-9999, -9999)

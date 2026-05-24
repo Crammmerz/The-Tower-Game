@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bqn3ibsn06apx"]
+
+[ext_resource type="Script" uid="uid://b88ivvfrdkb3m" path="res://Scenes/UI/Ingame/h_box_container.gd" id="1_iuft1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ql2io"]
+bg_color = Color(0.101960786, 0.07058824, 0.03137255, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blc2m"]
+bg_color = Color(0.8, 0, 0, 1)
+
+[node name="Hp" type="CanvasLayer" unique_id=1595597121]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1890116242]
+offset_left = 20.0
+offset_top = 19.0
+offset_right = 246.0
+offset_bottom = 59.0
+alignment = 1
+script = ExtResource("1_iuft1")
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=637630020]
+layout_mode = 2
+size_flags_vertical = 0
+text = "❤"
+
+[node name="HPbar" type="ProgressBar" parent="HBoxContainer" unique_id=1285551138]
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ql2io")
+theme_override_styles/fill = SubResource("StyleBoxFlat_blc2m")
+value = 100.0
+show_percentage = false

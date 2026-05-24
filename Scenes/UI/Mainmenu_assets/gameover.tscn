@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://byaubd137m4f3"]
+
+[node name="Gameover" type="CanvasLayer" unique_id=1395657864]
+
+[node name="Panel" type="Panel" parent="." unique_id=2126420226]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=799764151]
+offset_left = 435.0
+offset_top = 154.0
+offset_right = 734.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 60
+text = "Gameover"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="." unique_id=235749866]
+offset_left = 538.0
+offset_top = 267.0
+offset_right = 628.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 32
+text = "Retry"
+
+[node name="Quit" type="Button" parent="." unique_id=688434276]
+offset_left = 494.0
+offset_top = 344.0
+offset_right = 676.0
+offset_bottom = 398.0
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"

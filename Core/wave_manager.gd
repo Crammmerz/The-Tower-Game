@@ -4,14 +4,15 @@ extends Node
 @export var max_waves: int = 20
 @export var infitnite: bool = false
 
-var wave_counter: int = 18
+var wave_counter: int = 0
 var wave_delay: float = 1.0
 var kill_count: int = 0
 var total_enemies_in_wave: int = 0
+var active_enemies: int = 0
 
 var wave_data = { #
-	1: {"basic": 5, "unique": 1},
-	2: {"basic": 5, "unique": 3},
+	1: {"basic": 4, "unique": 1},
+	2: {"basic": 4, "unique": 2},
 	3: {"basic": 10, "unique": 6},
 	5: {"boss": 1, "unique": 3, "basic": 5}
 }
@@ -23,6 +24,20 @@ func _ready() -> void:
 	GameEvents.wave_end.connect(start_wave)
 	EntityPoolManager.entity_pool_loaded.connect(start_wave)
 	if infitnite: GameEvents.wave_end.connect(increment_wave)
+	GameEvents.game_end.connect(reset)
+	GameEvents.enemy_died.connect(enemy_inactive)
+	GameEvents.enemy_active.connect(enemy_active)
+
+func enemy_inactive(_node):
+	active_enemies -= 1
+
+func enemy_active():
+	active_enemies += 1
+
+func reset():
+	wave_counter = 0
+	kill_count = 0
+	total_enemies_in_wave = 0
 
 func start_wave():
 	if wave_counter >= max_waves:
@@ -50,15 +65,15 @@ func _trigger_spawns(config: Dictionary):
 		return
 
 	for i in config.get("basic", 0):
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.01).timeout
 		spawn_manager.spawn_basic()
 	
 	for i in config.get("unique", 0):
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.01).timeout
 		spawn_manager.spawn_unique()
 		
 	for i in config.get("boss", 0):
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.01).timeout
 		spawn_manager.spawn_boss()
 
 func get_wave_config(wave_num: int) -> Dictionary:

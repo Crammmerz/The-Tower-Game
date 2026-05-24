@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://ch3iqgkodfhfh"]
 
-[ext_resource type="Script" uid="uid://boi8853nfg7kx" path="res://Scenes/Player/player.gd" id="1_7pk37"]
+[ext_resource type="Script" uid="uid://0oc5w2h84flt" path="res://Scenes/Player/player.gd" id="1_7pk37"]
 [ext_resource type="Resource" uid="uid://jp54dtai7lq1" path="res://Scenes/Player/player.tres" id="2_hcf0b"]
 [ext_resource type="Texture2D" uid="uid://djj4ygtradcn7" path="res://Asset/Sprites/Immobile_Spritesheet.png" id="3_3auub"]
 [ext_resource type="Texture2D" uid="uid://cflqugu86alua" path="res://Asset/Sprites/Walking_Spritesheet.png" id="4_3auub"]
-[ext_resource type="Script" uid="uid://dsee0a1322aax" path="res://Scenes/Player/detection_manager.gd" id="4_avjtm"]
-[ext_resource type="Script" uid="uid://d2o4t8polhety" path="res://Scenes/Player/lock_on_indicator.gd" id="5_5a3px"]
+[ext_resource type="Script" uid="uid://bc34r71pxmgjp" path="res://Scenes/Player/detection_manager.gd" id="4_avjtm"]
+[ext_resource type="Script" uid="uid://d4n1g1hi05yjx" path="res://Scenes/Player/lock_on_indicator.gd" id="5_5a3px"]
 [ext_resource type="Script" uid="uid://cx88p8jwimxcx" path="res://Core/hurtbox.gd" id="5_kvusx"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="5_ufity"]
 [ext_resource type="Script" uid="uid://uc674y5gcr5p" path="res://Core/ability_manager.gd" id="7_jhrqm"]
-[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Common/Resource/Ability/arrow_projectile.tres" id="10_0kmp4"]
+[ext_resource type="Resource" uid="uid://p2q8n8ubvsqi" path="res://Common/Resource/Ability/arrow_projectile.tres" id="10_ji083"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kotpw"]
 atlas = ExtResource("3_3auub")
@@ -207,7 +207,7 @@ player = NodePath("..")
 
 [node name="AbilityManager" type="Node" parent="." unique_id=402996791]
 script = ExtResource("7_jhrqm")
-test = ExtResource("10_0kmp4")
+test = ExtResource("10_ji083")
 
 [connection signal="body_entered" from="HurtBox" to="HurtBox" method="_on_body_entered"]
 [connection signal="area_entered" from="Detection Range" to="Detection Range" method="_on_area_entered"]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://cuyry1qar4s6l"]
+
+[ext_resource type="PackedScene" uid="uid://bsig2hfc6mdxc" path="res://Scenes/Trait/Actives/Overdrive/Overdrive.tscn" id="1_sofpx"]
+[ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Common/Resource/ability_definition.gd" id="2_jluad"]
+
+[resource]
+script = ExtResource("2_jluad")
+name = "Overdrive"
+cooldown = 10.0
+scene = ExtResource("1_sofpx")
+pool_size = 2
+special_tags = {
+"require_target": false
+}

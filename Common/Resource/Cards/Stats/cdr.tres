@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatCardData" format=3 uid="uid://dk7b8ucplqiv"]
+
+[ext_resource type="Script" uid="uid://c20vr1nwnx7wb" path="res://Common/Resource/stat_card_definition.gd" id="1_k6q2d"]
+
+[resource]
+script = ExtResource("1_k6q2d")
+stat_to_upgrade = 7
+change_value = 0.1
+card_name = "Alacrity "
+card_description = "A card that reduces ability cooldowns, letting you reuse skills more quickly and maintain a faster combat rhythm. (+0.1 Cooldown Reduction)"
+weight = 5

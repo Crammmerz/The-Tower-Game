@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ActiveAbilityCard" format=3 uid="uid://c3gitbpev8i6o"]
+
+[ext_resource type="Script" uid="uid://bls05w87ij02t" path="res://Common/Resource/active_ability_card_definition.gd" id="1_4yfwg"]
+[ext_resource type="Resource" uid="uid://cuyry1qar4s6l" path="res://Scenes/Trait/Actives/Overdrive/overdrive.tres" id="1_dvmxo"]
+[ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="2_5xw77"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgbe7"]
+atlas = ExtResource("2_5xw77")
+region = Rect2(969, 6, 13, 18)
+
+[resource]
+script = ExtResource("1_4yfwg")
+ability = ExtResource("1_dvmxo")
+card_name = "Overdrive"
+card_description = "An active skill that floods the user with raw energy, temporarily accelerating their combat rhythm and granting a cooldown reduction buff that lets abilities be unleashed more frequently."
+card_icon = SubResource("AtlasTexture_kgbe7")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://byjve3jkd0wol"]
+
+[ext_resource type="VideoStream" uid="uid://c0o5c5h0t66uv" path="res://Asset/Video/Intro.ogv" id="1_l3uv7"]
+[ext_resource type="Script" uid="uid://b5r1bn0x6vdx5" path="res://Scenes/UI/Loading/video_player.gd" id="2_1bnjd"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" unique_id=659276523]
+offset_left = -70.0
+offset_top = -37.0
+offset_right = 1210.0
+offset_bottom = 683.0
+mouse_filter = 1
+stream = ExtResource("1_l3uv7")
+volume_db = -0.55000013
+script = ExtResource("2_1bnjd")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://cgaq1vwtel760"]
+[gd_resource type="Resource" script_class="AbilityDefinition" format=3 uid="uid://bgy5x28nsxp3b"]
 
 [ext_resource type="PackedScene" uid="uid://8uro4s4wsr3n" path="res://Scenes/Trait/Actives/Projectile/SlimeProjectile.tscn" id="1_aavlv"]
 [ext_resource type="Script" uid="uid://bvk1bohqhxtwt" path="res://Common/Resource/ability_definition.gd" id="2_wd84q"]
@@ -7,7 +7,7 @@
 script = ExtResource("2_wd84q")
 name = "Slime Projectile"
 base_value = 5.0
-cooldown = 1.0
+cooldown = 3.0
 scene = ExtResource("1_aavlv")
 pool_size = 40
 special_tags = {

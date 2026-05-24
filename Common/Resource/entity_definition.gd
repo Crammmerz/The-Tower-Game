@@ -36,4 +36,3 @@ var current_hp: float = max_health
 func recalc_stats():
 	var past_hp = max_health
 	total_max_hp = max_health * hp_modifier
-	current_hp = total_max_hp - past_hp

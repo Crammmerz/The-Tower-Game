@@ -30,11 +30,17 @@ func update_animations() -> void:
 
 func take_damage(value) -> void:
 	if profile.is_immune: return
-	profile.current_hp -= value
+	var total_def = profile.defense * profile.def_modifier
+	var reduction = total_def / (total_def + 100.0)
+	var final_damage = value * (1.0 - reduction)
+	
+	profile.current_hp -= final_damage
+	
+	GameEvents.player_damaged.emit(profile.current_hp,profile.max_health)
 	flash_hit_effect()
 	if profile.current_hp <= 0:
 		print(profile.current_hp)
-		GameEvents.emit_signal("player_died")
+		GameEvents.player_died.emit()
 
 func flash_hit_effect():
 	var tween = create_tween()

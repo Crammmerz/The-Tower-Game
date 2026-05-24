@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="ActiveAbilityCard" format=3 uid="uid://b300quimtkm2i"]
+[gd_resource type="Resource" script_class="ActiveAbilityCard" format=3 uid="uid://cppv3uorucy1j"]
 
-[ext_resource type="Resource" uid="uid://bdrqfgbv21lca" path="res://Common/Resource/Ability/arrow_projectile.tres" id="1_oha2x"]
+[ext_resource type="Resource" uid="uid://p2q8n8ubvsqi" path="res://Common/Resource/Ability/arrow_projectile.tres" id="1_u67jg"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="2_2s7io"]
 [ext_resource type="Script" uid="uid://bls05w87ij02t" path="res://Common/Resource/active_ability_card_definition.gd" id="2_u67jg"]
 
@@ -10,6 +10,7 @@ region = Rect2(716, 5, 36, 11)
 
 [resource]
 script = ExtResource("2_u67jg")
-ability = ExtResource("1_oha2x")
+ability = ExtResource("1_u67jg")
 card_name = "Archery"
 card_icon = SubResource("AtlasTexture_25aid")
+weight = 50

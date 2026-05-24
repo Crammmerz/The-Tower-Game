@@ -12,5 +12,5 @@ region = Rect2(195, 3, 18, 18)
 script = ExtResource("2_okq0i")
 ability_scene = ExtResource("1_hp4ew")
 card_name = "Fire Zone"
-card_description = "Creates a blazing hazard zone that continuously damages enemies within its radius. The zone deals a base fire damage of 5.0 per tick, with damage scaling by +0.05 per point of Strength. As the player’s Strength increases, the FireZone becomes progressively more lethal, making it a reliable area‑control ability against waves of enemies."
+card_description = "Creates a blazing hazard zone that continuously damages enemies within its radius, dealing 5.0 base fire damage per tick and scaling by +0.05 per point of Strength, making it increasingly lethal as the player’s Strength grows."
 card_icon = SubResource("AtlasTexture_lnjk1")

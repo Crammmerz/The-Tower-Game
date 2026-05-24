@@ -15,6 +15,7 @@ signal player_damaged(current_hp, max_hp)
 signal player_died()
 
 signal enemy_died(enemy_node)
+signal enemy_active()
 
 signal loading_complete()
 

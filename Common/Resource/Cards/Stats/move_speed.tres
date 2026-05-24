@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_2yhxq")
+stat_to_upgrade = 2
 change_value = 40.0
 card_name = "Runner's Lungs"
 card_description = "Improves the character’s agility, allowing faster movement across the battlefield. Higher move speed enables quicker repositioning, smoother dodging, and more efficient pursuit or retreat. (+40 Move Speed)"
