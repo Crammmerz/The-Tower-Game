@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu31q14l41oa2"
-path="res://.godot/imported/mainlevbuild.png-f0bb798946ff6171f89a94f5a5d0eb15.ctex"
+uid="uid://bmr8w2huq2000"
+path="res://.godot/imported/candleB_04.png-df730838f23cfa59a59e1435c0f8d900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Sprites/RF_Catacombs_v1.0/mainlevbuild.png"
-dest_files=["res://.godot/imported/mainlevbuild.png-f0bb798946ff6171f89a94f5a5d0eb15.ctex"]
+source_file="res://RF_Catacombs_v1.0/candleB_04.png"
+dest_files=["res://.godot/imported/candleB_04.png-df730838f23cfa59a59e1435c0f8d900.ctex"]
 
 [params]
 

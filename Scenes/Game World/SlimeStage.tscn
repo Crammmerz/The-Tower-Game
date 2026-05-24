@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dxcjrjgcq1853"]
 
-[ext_resource type="Texture2D" path="res://RF_Catacombs_v1.0/mainlevbuild.png" id="1_ktl0d"]
-[ext_resource type="Texture2D" path="res://RF_Catacombs_v1.0/decorative.png" id="2_1c2jk"]
+[ext_resource type="Texture2D" uid="uid://cu31q14l41oa2" path="res://RF_Catacombs_v1.0/mainlevbuild.png" id="1_ktl0d"]
+[ext_resource type="Texture2D" uid="uid://by7l46sp6uwj4" path="res://RF_Catacombs_v1.0/decorative.png" id="2_1c2jk"]
 [ext_resource type="PackedScene" uid="uid://ch3iqgkodfhfh" path="res://Scenes/Player/Player.tscn" id="2_taavv"]
 [ext_resource type="Script" uid="uid://dc0e0edlfwhkm" path="res://Core/entity_manager.gd" id="3_bvohw"]
 [ext_resource type="PackedScene" uid="uid://dpiq152rngtsl" path="res://Scenes/Enemy/Slime/SlimeBasic.tscn" id="4_6daec"]

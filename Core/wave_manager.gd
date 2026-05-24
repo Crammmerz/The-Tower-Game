@@ -13,8 +13,8 @@ var active_enemies: int = 0
 var wave_data = { #
 	1: {"basic": 4, "unique": 1},
 	2: {"basic": 4, "unique": 2},
-	3: {"basic": 10, "unique": 6},
-	5: {"boss": 1, "unique": 3, "basic": 5}
+	3: {"basic": 8, "unique": 3},
+	5: {"boss": 1, "unique": 1, "basic": 3}
 }
 
 func _ready() -> void:

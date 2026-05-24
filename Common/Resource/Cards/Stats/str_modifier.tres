@@ -7,5 +7,5 @@ script = ExtResource("1_g0eqo")
 stat_to_upgrade = 6
 change_value = 0.05
 card_name = "Force "
-card_description = "A permanent upgrade that amplifies the impact of your Strength stat, increasing the effectiveness of abilities and scaling damage output proportionally with higher Strength values. (+0.5 Strength Modifier)"
+card_description = "A permanent upgrade that amplifies the impact of your Strength stat, increasing the effectiveness of abilities and scaling damage output proportionally with higher Strength values. (+0.05 Strength Modifier)"
 weight = 5

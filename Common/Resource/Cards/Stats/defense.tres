@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_m5xkt")
 stat_to_upgrade = 4
-change_value = 10.0
+change_value = 50.0
 card_name = "Plated Armor"
 card_description = "A permanent upgrade that reduces the damage taken from enemy attacks, strengthening survivability and allowing the player or tower to endure longer against waves of threats. (+10 Defense)"
 weight = 40

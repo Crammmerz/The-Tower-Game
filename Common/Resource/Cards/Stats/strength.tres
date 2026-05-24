@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_nuwmx")
 stat_to_upgrade = 3
-change_value = 3.0
+change_value = 5.0
 card_name = "Brawler's Grit"
 card_description = "Amplifies the character’s innate power, increasing the potency of attacks and abilities that draw upon raw force. Strength represents the fundamental energy behind combat techniques. (+3 Strength)"
 weight = 45

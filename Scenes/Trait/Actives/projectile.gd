@@ -8,11 +8,14 @@ var direction = Vector2.ZERO
 var duration: float = 2.0 
 var current_time: float = 0.0
 var hit_count = 0
+var dmg = 10
 
 @onready var hitbox: Area2D = $Hitbox 
 
 func _ready() -> void:
 	deactivate()
+
+
 
 func _process(delta: float) -> void:
 	position += direction * speed * delta
@@ -25,7 +28,7 @@ func activate(entity: Node2D, target_pos: Vector2, data: AbilityDefinition):
 	def = data
 	body = entity
 	hitbox.faction = entity.profile.faction
-	
+	dmg = def.base_value * entity.profile.strength
 	global_position = body.global_position
 	direction = (target_pos - global_position).normalized()
 	
@@ -45,7 +48,6 @@ func deactivate():
 	global_position = Vector2(-9999, -9999)
 
 func _on_hitbox_hit_registered(target: Node2D) -> void:
-	var dmg = def.base_value
 	if target.has_method("take_damage"):
 		target.take_damage(dmg)
 		

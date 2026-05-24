@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cdgrvkpd114kc"]
 
-[ext_resource type="Script" uid="uid://blbnxhdnvelj3" path="res://Scenes/Trait/Actives/projectile.gd" id="1_i2lh0"]
+[ext_resource type="Script" uid="uid://nbwj7bki3ljr" path="res://Scenes/Trait/Actives/projectile.gd" id="1_i2lh0"]
 [ext_resource type="Script" uid="uid://cm7hqu1tr6kf2" path="res://Core/hitbox.gd" id="2_mh8vr"]
 [ext_resource type="Texture2D" uid="uid://dsok8occgyq7o" path="res://Asset/Sprites/TX Village Props.png" id="3_cbfjy"]
 

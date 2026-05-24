@@ -21,7 +21,14 @@ signal loading_complete()
 
 var player: Node2D = null
 var current_wave: int = 0
+var is_ended = false
 
+func _ready() -> void:
+	game_end.connect(game_ended)
+	game_start.connect(game_started)
+
+func game_ended(): is_ended = true
+func game_started(): is_ended = false
 func register_player(node: Node2D):
 	player = node
 	player_registered.emit(node)

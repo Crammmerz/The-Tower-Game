@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_5s1kw")
-change_value = 20.0
+change_value = 40.0
 card_name = "Vitality I"
 card_description = "A reservoir of vitality that defines the upper limit of your survivability. (+20 Max Health)"
 weight = 50

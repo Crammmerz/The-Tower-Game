@@ -16,6 +16,11 @@ func _ready() -> void:
 	global_position = Vector2(-9999, -9999)
 
 func _process(delta: float) -> void:
+	if not is_instance_valid(unit):
+		visible = false
+		set_process(false)
+		return
+		
 	global_position = unit.global_position
 	
 	current_time += delta

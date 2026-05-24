@@ -24,6 +24,7 @@ func initialize_pool(entity: PackedScene, size: int):
 	pools[entity] = new_pool
 
 func get_from_pool(entity: PackedScene):
+	if not pools.has(entity): return null
 	for obj in pools[entity]:
 		if not obj.visible:
 			return obj
