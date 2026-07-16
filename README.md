@@ -15,7 +15,7 @@ In The Tower Game you play as a sentient tower fighting to withstand waves of ho
 
 ## Demo
 
-No demo available yet. To play locally, see the "Getting started" section below.
+[▶ Watch Gameplay Demo](https://drive.google.com/file/d/1cETxZwhv3V2F2YeccHHNDRpoRGyt49tb/view?usp=sharing)
 
 ## Features
 
