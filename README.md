@@ -1,12 +1,13 @@
 # 🏰 The Tower Game
 
-A Godot-powered survival game where you are reincarnated as a tower in a collapsing world. Survive endless waves of slimes and protect humanity by upgrading your tower and managing resources.
+A Godot-powered survival project where you are reincarnated as a tower in a collapsing world.
+Your only goal: survive against endless waves of slimes.
 
 ## Usage / Permissions
 
 This repository is a portfolio/demo project intended to showcase development work. The project is provided for viewing and educational purposes only. Do not copy, modify, distribute, or use the code or assets to create a game or derivative project without explicit written permission from the copyright holder.
 
-See the LICENSE file for full details.
+This project is intended as a portfolio/demo showcasing development work in Godot, emphasizing clean architecture and scalability.
 
 ## Overview
 
@@ -21,8 +22,9 @@ No demo available yet. To play locally, see the "Getting started" section below.
 - Infinity Mode: Endless waves — survive as long as you can.
 - Dynamic Horde Mechanics: Slimes spawn and scale in difficulty over time.
 - Progression System: Gain XP and upgrade your tower to handle stronger waves.
-- Modular Architecture: Manager-based OOP design (WaveManager, ProgressionManager, PlayerStateManager, GameManager, UIManager, AudioManager).
-- Signal-driven flow for clear communication between systems.
+- Modular Architecture: Manager-based design for clarity and scalability. (WaveManager, ProgressionManager, PlayerStateManager, GameManager, UIManager, AudioManager).
+- Signal-Driven Flow: Systems communicate via signals for clean separation of concerns.
+- OOP Principles: Built with reusable, maintainable code structure.
 
 ## Technical Details
 
@@ -78,8 +80,11 @@ Please open issues for bugs or feature requests. If you want to contribute code 
 
 ## License
 
-All rights reserved. See the LICENSE file for the full text and contact information for permission requests.
+All rights reserved. See the LICENSE file for full details.
+This project is provided for educational and portfolio purposes only.
+Do not copy, modify, or distribute without explicit permission.
 
 ## Contact
 
-Created and maintained by @Crammmerz
+Created and maintained by @Crammmerz.
+For collaboration or permissions, open an issue or reach out via GitHub profile.
