@@ -2,6 +2,12 @@
 
 A Godot-powered survival game where you are reincarnated as a tower in a collapsing world. Survive endless waves of slimes and protect humanity by upgrading your tower and managing resources.
 
+## Usage / Permissions
+
+This repository is a portfolio/demo project intended to showcase development work. The project is provided for viewing and educational purposes only. Do not copy, modify, distribute, or use the code or assets to create a game or derivative project without explicit written permission from the copyright holder.
+
+See the LICENSE file for full details.
+
 ## Overview
 
 In The Tower Game you play as a sentient tower fighting to withstand waves of hostile slimes. The game focuses on replayable survival gameplay with scalable difficulty, modular systems, and progress-based upgrades.
@@ -50,9 +56,20 @@ To run:
 - Use the on-screen UI to interact with the tower upgrades and abilities.
 - Keyboard/mouse/gamepad mappings can be configured in the Godot project settings.
 
+## Team
+
+- @Crammmerz — Developer / Maintainer
+- @raarowkey — Arts / Graphics Designer
+- @ven — UI Designer
+- @jihnxy — Game Level Designer
+
+If you'd like to contact a team member about permissions or collaboration, open an issue or reach out via their GitHub profile.
+
 ## Contributing
 
-Contributions are welcome. Please open issues for bugs or feature requests. If you want to contribute code, fork the repo and open a pull request describing your changes.
+Contributions are welcome in the form of feedback. For code or asset reuse requests, you MUST obtain written permission from the copyright holder before proceeding.
+
+Please open issues for bugs or feature requests. If you want to contribute code (with permission), fork the repo and open a pull request describing your changes.
 
 ## Notes & Roadmap
 
@@ -61,10 +78,8 @@ Contributions are welcome. Please open issues for bugs or feature requests. If y
 
 ## License
 
-No license specified. If you want to make this project open-source under a specific license, add a LICENSE file (MIT, GPL, etc.).
+All rights reserved. See the LICENSE file for the full text and contact information for permission requests.
 
 ## Contact
 
-Created by @Crammmerz
-
-
+Created and maintained by @Crammmerz
